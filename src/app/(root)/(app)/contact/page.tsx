@@ -1,4 +1,4 @@
-import { FORMSPREE_KEY, SOCIALS } from '@/constans/common'
+import { FORMSPREE_KEY } from '@/constans/common'
 import type { Metadata } from 'next'
 import PageTitle from '../components/PageTitle'
 import ContactForm from './components/ContactForm'
@@ -6,9 +6,9 @@ import ContactForm from './components/ContactForm'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Contact - Dede Ariansya',
+  title: 'Contact - Hithaishi Surendra',
   openGraph: {
-    title: 'Contact - Dede Ariansya',
+    title: 'Contact - Hithaishi Surendra',
     url: '/contact',
   },
   alternates: {
@@ -23,35 +23,25 @@ export default function ContactPage() {
       <div className="flex flex-col lg:flex-row">
         <div className="mb-4 w-full text-center lg:w-[480px] lg:text-left">
           <div className="mb-8">
-            <h2 className="mb-3 text-lg font-bold">TEMPORARY ADDRESS</h2>
+            <h2 className="mb-3 text-lg font-bold">LOCATION</h2>
             <p className="text-sm leading-5">
-              Bali, Indonesia. <br />
-              80361
+              Tempe, AZ <br />
+              USA
             </p>
           </div>
           <div className="mb-8">
             <h2 className="mb-3 text-lg font-bold">EMAIL ADDRESS</h2>
             <p className="text-sm leading-5">
-              <a href="mailto:me@dedeard.my.id" rel="noopener" className="hover:text-yellow-600">
-                me@dedeard.my.id
-              </a>
-              <br />
-              <a href="mailto:dedeariansya1@gmail.com" rel="noopener" className="hover:text-yellow-600">
-                dedeariansya1@gmail.com
+              <a href="mailto:hsurendr@asu.edu" rel="noopener" className="hover:text-yellow-600">
+                hsurendr@asu.edu
               </a>
             </p>
           </div>
           <div className="mb-8">
-            <h2 className="mb-3 text-lg font-bold">MOBILE PHONE</h2>
+            <h2 className="mb-3 text-lg font-bold">PHONE</h2>
             <p className="text-sm leading-5">
-              <span>Call: </span>
-              <a href="tel:+6281343912883" target="_blank" rel="noopener" className="hover:text-yellow-600">
-                +62 813-4391-2883
-              </a>
-              <br />
-              <span>WhatsApp: </span>
-              <a href={SOCIALS.WA} target="_blank" rel="noopener" className="hover:text-yellow-600">
-                +62 813-4391-2883
+              <a href="tel:+14807426031" target="_blank" rel="noopener" className="hover:text-yellow-600">
+                (480) 742-6031
               </a>
             </p>
           </div>

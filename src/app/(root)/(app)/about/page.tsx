@@ -8,9 +8,9 @@ import PageTitle from '../components/PageTitle'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'About - Dede Ariansya',
+  title: 'About - Hithaishi Surendra',
   openGraph: {
-    title: 'About - Dede Ariansya',
+    title: 'About - Hithaishi Surendra',
     url: '/about',
   },
   alternates: {
@@ -24,27 +24,20 @@ export default function AboutPage() {
       <PageTitle title="About" />
       <div className="md:flex">
         <div className="mb-5 md:w-56">
-          <Image src={dedeard} alt="Foto dede ariansya" className="block w-full" placeholder="blur" />
+          <Image src={dedeard} alt="Hithaishi Surendra profile photo" className="block w-full" placeholder="blur" />
         </div>
         <div className="md:flex-1 md:pl-6">
-          <h2 className="mb-2 text-xl font-bold">I’m Dede Ardiansya</h2>
+          <h2 className="mb-2 text-xl font-bold">I'm Hithaishi Surendra</h2>
           <div className="mb-6">
-            <p className="mb-1">
-              Full Stack Web Developer based in Makassar, Indonesia. <br />I try my best to make the code I write easy to read and
-              understand.
+            <p className="mb-3">
+              Fresh CS grad from Arizona State with a focus on ML, Agentic AI, and Distributed Systems. I build things end-to-end - scalable
+              backends, AI-powered features, microservices and I care about systems that actually work in production.
             </p>
-          </div>
-          <h2 className="mb-2 text-xl font-bold">Saya Dede Ardiansya</h2>
-          <div className="mb-6">
             <p className="mb-1">
-              Full Stack Web Developer berbasis di Makassar, Indonesia.
-              <br />
-              Saya mencoba yang terbaik untuk membuat kode yang saya tulis mudah untuk dibaca dan dipahami.
+              I've shipped at startups (Thropic, Vantion) and at scale (Telstra), which means I'm comfortable going from zero to one and
+              from one to many. Think automated scoring and AI quiz generation, monolith-to-microservices, and cloud storage systems at
+              scale. Currently looking for software engineering and MLE roles where I can keep doing both.
             </p>
-          </div>
-          <h2 className="mb-2 text-xl font-bold">Tech i love</h2>
-          <div className="mb-6">
-            <p className="mb-1">TypeScript, Express.js, Laravel, Tailwind, Bootstrap, Vue and React.</p>
           </div>
           <a
             download

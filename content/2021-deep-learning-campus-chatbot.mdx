@@ -1,0 +1,179 @@
+---
+title: 'Deep Learning-based Campus Assistive Chatbot'
+publishedAt: '2021-12'
+summary: 'Building an NLP-powered chatbot for campus assistance with 89% intent classification accuracy, deployed at R.V. College of Engineering.'
+slug: 'deep-learning-campus-chatbot'
+---
+
+## Overview
+
+This research presents the development and deployment of an intelligent campus assistive chatbot using natural language processing and deep learning techniques. Published in IEEE CSITSS (Conference on Signal and Information Processing, Networking and Computers) in 2021, this work demonstrates practical NLP applications in educational environments.
+
+**Publication:** IEEE CSITSS, December 2021
+**[Read the full paper](https://ieeexplore.ieee.org/document/9683551)**
+
+## Project Context
+
+This project was developed during my internship with Cisco at R.V. College of Engineering, Bangalore. The chatbot was designed to assist students, faculty, and visitors with common queries about the campus, courses, events, and facilities.
+
+## Key Features
+
+### NLP Pipeline Architecture
+
+The chatbot employs a sophisticated NLP pipeline consisting of:
+
+1. **Text Preprocessing:** Tokenization, lowercasing, and stemming using NLTK
+2. **Feature Extraction:** Bag of Words (BoW) representation
+3. **Intent Classification:** Sequential Neural Network
+4. **Response Generation:** Template-based and dynamic responses
+
+### Neural Network Architecture
+
+- **Input Layer:** Bag of Words feature vectors
+- **Hidden Layers:** Dense layers with ReLU activation
+- **Output Layer:** Softmax activation for multi-class intent classification
+- **Accuracy:** 89% on 100 test interactions
+
+## Technical Implementation
+
+### Natural Language Processing
+
+```python
+# Key components of the NLP pipeline:
+- NLTK for text preprocessing
+- Bag of Words for feature representation
+- Custom intent classification model
+- Entity extraction for context understanding
+```
+
+**Technologies Used:**
+
+- **NLP Library:** Natural Language Toolkit (NLTK)
+- **Deep Learning:** Sequential Neural Network (Keras/TensorFlow)
+- **Activation Functions:** ReLU (hidden layers), Softmax (output layer)
+- **Feature Engineering:** Bag of Words vectorization
+
+### Integration Features
+
+**Google Maps API Integration:**
+
+- Location-based queries (finding buildings, labs, departments)
+- Navigation assistance within campus
+- Points of interest recommendations
+
+**Feedback Loop:**
+
+- User satisfaction tracking
+- Continuous model improvement through feedback
+- Iterative accuracy enhancement
+
+## Deployment & Impact
+
+### Production Deployment
+
+- **Platform:** College website integration
+- **Traffic:** Handling 100+ daily queries
+- **Availability:** 24/7 automated assistance
+- **Response Time:** Sub-second latency
+
+### Use Cases
+
+The chatbot successfully handled queries across multiple categories:
+
+1. **Academic Information:**
+   - Course schedules and syllabi
+   - Faculty information and office hours
+   - Exam schedules and results
+
+2. **Campus Navigation:**
+   - Building locations and room numbers
+   - Lab and facility information
+   - Event venues
+
+3. **General Queries:**
+   - Admission procedures
+   - Campus events and activities
+   - Hostel and cafeteria information
+
+## Performance Evaluation
+
+### Metrics
+
+| Metric                         | Value                    |
+| ------------------------------ | ------------------------ |
+| Intent Classification Accuracy | 89%                      |
+| Daily Queries Handled          | 100+                     |
+| Average Response Time          | <1 second                |
+| User Satisfaction              | High (based on feedback) |
+
+### Testing
+
+- **Test Set:** 100 diverse user interactions
+- **Categories:** 15+ intent classes
+- **Cross-validation:** K-fold validation for robustness
+- **Real-world Testing:** Live deployment feedback
+
+## Challenges & Solutions
+
+### Challenge 1: Intent Ambiguity
+
+**Solution:** Multi-intent classification with confidence thresholding
+
+### Challenge 2: Out-of-vocabulary Words
+
+**Solution:** Subword tokenization and fallback mechanisms
+
+### Challenge 3: Context Management
+
+**Solution:** Session-based context tracking
+
+## Technical Skills Demonstrated
+
+- **Natural Language Processing:** NLTK, text preprocessing, intent classification
+- **Deep Learning:** Sequential Neural Networks, ReLU, Softmax
+- **API Integration:** Google Maps API
+- **Deployment:** Web application integration
+- **Software Engineering:** Feedback systems, continuous improvement
+
+## Future Enhancements
+
+Potential improvements for the chatbot system:
+
+1. **Advanced NLP Models:**
+   - Transformer-based architectures (BERT, GPT)
+   - Contextual embeddings for better understanding
+
+2. **Multi-turn Conversations:**
+   - Dialog management systems
+   - Context-aware responses
+
+3. **Voice Integration:**
+   - Speech-to-text and text-to-speech
+   - Voice-based campus assistance
+
+4. **Personalization:**
+   - User profile-based responses
+   - Recommendation systems
+
+## Real-world Impact
+
+The deployment of this chatbot at R.V. College of Engineering resulted in:
+
+- **Reduced Administrative Load:** Automated responses to common queries
+- **24/7 Availability:** Students could get help anytime
+- **Improved User Experience:** Quick and accurate information retrieval
+- **Scalability:** System handled increasing query volumes effectively
+
+## Learning Outcomes
+
+This project provided valuable experience in:
+
+- End-to-end NLP application development
+- Production deployment of ML models
+- User feedback integration and iterative improvement
+- Cross-functional collaboration (internship with Cisco)
+- Real-world problem-solving in educational technology
+
+---
+
+_This work was developed during my Cisco internship at R.V. College of Engineering, Bangalore, India, and published in IEEE CSITSS 2021._

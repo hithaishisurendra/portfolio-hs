@@ -3,12 +3,12 @@ import PageTitleAnimation from './components/PageTitleAnimation'
 import RootBackground from './components/RootBackground'
 
 export const metadata: Metadata = {
-  title: 'Dede Ariansya',
-  description: 'I’m Dede Ariansya, Full Stack Web Developer based in Makassar, Indonesia.',
+  title: 'Hithaishi Surendra',
+  description: 'Fresh CS grad from Arizona State with a focus on ML, Agentic AI, and Distributed Systems.',
   openGraph: {
     images: '/media/poster.jpg',
-    title: 'Dede Ariansya',
-    description: 'I’m Dede Ariansya, Full Stack Web Developer based in Makassar, Indonesia.',
+    title: 'Hithaishi Surendra',
+    description: 'Fresh CS grad from Arizona State with a focus on ML, Agentic AI, and Distributed Systems.',
     url: '/',
   },
   alternates: {

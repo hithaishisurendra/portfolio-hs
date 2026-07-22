@@ -1,5 +1,3 @@
-import timeFromNow from './time-from-now'
-
 export default function formatDate(date: string) {
   let datetime = new Date(date)
 
@@ -9,5 +7,5 @@ export default function formatDate(date: string) {
     year: 'numeric',
   })
 
-  return `${fullDate} (${timeFromNow(date)})`
+  return fullDate
 }

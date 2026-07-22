@@ -1,0 +1,108 @@
+---
+title: 'Lane and Traffic Sign Detection for ADAS using Deep Learning'
+publishedAt: '2023-11'
+summary: 'Implementing SegNet and YOLO for autonomous driving applications with high accuracy in the CARLA simulator.'
+slug: 'lane-traffic-sign-detection-adas'
+---
+
+## Overview
+
+This research paper presents a comprehensive approach to lane and traffic sign detection for Advanced Driver Assistance Systems (ADAS) using deep learning techniques. Published in the International Journal on Recent and Innovation Trends in Computing and Communication (IJRITCC) in 2023, this work demonstrates the practical application of semantic segmentation and object detection in autonomous driving scenarios.
+
+**Publication:** IJRITCC, November 2023
+**[Read the full paper](https://ijritcc.org/index.php/ijritcc/article/view/8891)**
+
+## Key Contributions
+
+### Lane Detection with SegNet
+
+We implemented SegNet, a deep convolutional encoder-decoder architecture, for semantic segmentation tasks specifically focused on lane detection:
+
+- **Accuracy:** 94.80%
+- **Mean Average Precision (mAP):** 93.33%
+- **Environment:** CARLA autonomous driving simulator
+
+The semantic segmentation approach allows the model to classify each pixel in the image, enabling precise lane boundary identification even in challenging conditions.
+
+### Traffic Sign Detection with YOLO
+
+For traffic sign detection, we utilized the YOLO (You Only Look Once) object detection framework:
+
+- **Accuracy:** 95.56%
+- **Real-time Detection:** Single-stage detector enabling fast inference
+- **Robustness:** Tested across multiple weather and lighting conditions
+
+## Dataset Creation
+
+One of the significant contributions of this work was the creation of custom datasets:
+
+- **Lane Detection Dataset:** 864 images captured across multiple towns and weather conditions
+- **Traffic Sign Dataset:** 612 images with diverse sign types and environmental variations
+- **Diversity:** Images collected from various scenarios including:
+  - Different times of day (dawn, noon, dusk, night)
+  - Weather conditions (clear, cloudy, rainy, foggy)
+  - Multiple urban and suburban environments
+
+## Experimental Results
+
+Our approach outperformed traditional baseline methods:
+
+| Model        | Task                   | Accuracy/mAP      |
+| ------------ | ---------------------- | ----------------- |
+| SegNet       | Lane Detection         | 94.80% / 93.33%   |
+| YOLO         | Traffic Sign Detection | 95.56%            |
+| Faster R-CNN | Baseline Comparison    | Lower performance |
+| R-FCN        | Baseline Comparison    | Lower performance |
+
+## Technical Implementation
+
+### Architecture Details
+
+**SegNet Architecture:**
+
+- Encoder-decoder structure with VGG-16 backbone
+- Pixel-wise classification for semantic segmentation
+- Max-pooling indices for upsampling in decoder
+
+**YOLO Architecture:**
+
+- Single-stage detector for real-time object detection
+- Grid-based bounding box prediction
+- Anchor boxes for multiple object scales
+
+### Training Details
+
+- **Framework:** PyTorch/TensorFlow
+- **Simulator:** CARLA (Car Learning to Act)
+- **Data Augmentation:** Rotation, brightness adjustment, noise addition
+- **Optimization:** Adam optimizer with learning rate scheduling
+
+## Applications
+
+This research has direct applications in:
+
+1. **Autonomous Vehicles:** Real-time lane keeping and traffic sign recognition
+2. **ADAS Systems:** Warning systems for lane departure and traffic sign awareness
+3. **Simulation Testing:** Validation framework for autonomous driving algorithms
+4. **Dataset Creation:** Methodology for generating diverse training data
+
+## Future Work
+
+Potential extensions of this research include:
+
+- Integration with other perception tasks (pedestrian detection, vehicle detection)
+- Multi-task learning for joint lane and sign detection
+- Transfer learning to real-world driving scenarios
+- Edge deployment for embedded automotive systems
+
+## Technical Skills Demonstrated
+
+- **Deep Learning Frameworks:** PyTorch, TensorFlow
+- **Computer Vision:** Semantic Segmentation, Object Detection
+- **Simulation:** CARLA Autonomous Driving Simulator
+- **Data Engineering:** Custom dataset creation and augmentation
+- **Model Evaluation:** Accuracy, mAP, and performance benchmarking
+
+---
+
+_This work was conducted as part of my undergraduate research at R.V. College of Engineering, Bangalore, India._

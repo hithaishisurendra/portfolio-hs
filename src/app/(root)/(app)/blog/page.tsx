@@ -6,9 +6,9 @@ import BlogPostItem from './components/BlogPostItem'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'Blog - Dede Ariansya',
+  title: 'Publications - Hithaishi Surendra',
   openGraph: {
-    title: 'Blog - Dede Ariansya',
+    title: 'Publications - Hithaishi Surendra',
     url: '/blog',
   },
   alternates: {
@@ -26,7 +26,7 @@ export default async function BlogPage() {
 
   return (
     <>
-      <PageTitle title="Blog" />
+      <PageTitle title="Publications" />
       <ul className="grid grid-cols-1 gap-3 md:mb-5">
         {blogs.map((post) => (
           <li key={post.slug}>

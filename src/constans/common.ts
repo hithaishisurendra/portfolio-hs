@@ -1,35 +1,35 @@
-import { FiBookOpen, FiClipboard, FiGlobe, FiHome, FiMail, FiUser } from 'react-icons/fi'
+import { FiAward, FiBriefcase, FiClipboard, FiHome, FiMail, FiUser } from 'react-icons/fi'
 
 export const HOST = process.env.NEXT_PUBLIC_HOST || 'http://localhost:3000'
 
 export const NAV_ITEMS = [
   { path: '/', label: 'Home', Icon: FiHome },
   { path: '/about', label: 'About', Icon: FiUser },
-  { path: '/blog', label: 'Blog', Icon: FiGlobe },
+  { path: '/experience', label: 'Experience', Icon: FiBriefcase },
   { path: '/projects', label: 'Projects', Icon: FiClipboard },
+  { path: '/blog', label: 'Publications', Icon: FiAward },
   { path: '/contact', label: 'Contact', Icon: FiMail },
-  { path: '/guestbook', label: 'Guestbook', Icon: FiBookOpen },
 ]
 
 export const PAGE_TITLES = {
   '/': '._',
   '/about': 'About',
-  '/blog': 'Blog',
+  '/experience': 'Experience',
   '/projects': 'Projects',
+  '/blog': 'Publications',
   '/contact': 'Contact',
-  '/guestbook': 'G-book',
 }
 
 export const SOCIALS = {
-  GH: 'https://github.com/dedeard',
-  IG: 'https://www.instagram.com/dcode.js',
-  IN: 'https://www.linkedin.com/in/dedeard/',
-  WA: 'https://api.whatsapp.com/send?phone=6285343854343&text=%3CChatMe%20%2F%3E',
+  GH: 'https://github.com/hithaishisurendra',
+  IN: 'https://www.linkedin.com/in/hithaishi-surendra',
+  GS: 'https://scholar.google.com/citations?user=dY1Zyw8AAAAJ&hl=en',
+  EMAIL: 'mailto:hsurendr@asu.edu',
 }
 
-export const RESUME_URL = 'https://drive.google.com/file/d/17EnrWbKObHNKFj4scsZM0R9JOX96uRJ3/view?usp=drive_link'
+export const RESUME_URL = 'https://drive.google.com/file/d/1WybyrpPrNGs60ckVYO-nJrhFtuO5USBQ/view?usp=sharing'
 
-export const FORMSPREE_KEY = 'xoqyaqqe'
+export const FORMSPREE_KEY = 'mredeykn'
 
 export const FIREBASE_CONFIG = {
   apiKey: 'AIzaSyCVXW6MTdRVtYPTOoV92ruBQ3ZQcF5Ho0g',
