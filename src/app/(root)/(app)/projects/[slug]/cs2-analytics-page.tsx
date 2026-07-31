@@ -7,9 +7,7 @@ export default function CS2AnalyticsPage() {
       <div className="border-b border-neutral-800 bg-black py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="mb-6 flex items-center justify-between">
-            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">
-              Distributed Systems · Real-Time Analytics
-            </div>
+            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">Distributed Systems · Real-Time Analytics</div>
             <a
               href="https://github.com/hithaishisurendra/Counter-Strike-2-Distributed-System"
               target="_blank"
@@ -22,14 +20,11 @@ export default function CS2AnalyticsPage() {
               View on GitHub
             </a>
           </div>
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-            Distributed Counter-Strike 2 Analytics Platform
-          </h1>
-          <p className="mb-4 text-2xl text-neutral-400">
-            Fault-tolerant telemetry processing at scale
-          </p>
+          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Distributed Counter-Strike 2 Analytics Platform</h1>
+          <p className="mb-4 text-2xl text-neutral-400">Fault-tolerant telemetry processing at scale</p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            CS2 generates millions of data points per match, but players lack tools to convert this telemetry into actionable feedback. This platform bridges that gap through Kafka-based ingestion, CockroachDB distributed storage, and real-time Grafana dashboards.
+            CS2 generates millions of data points per match, but players lack tools to convert this telemetry into actionable feedback. This
+            platform bridges that gap through Kafka-based ingestion, CockroachDB distributed storage, and real-time Grafana dashboards.
           </p>
 
           {/* Key Metrics */}
@@ -61,10 +56,14 @@ export default function CS2AnalyticsPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              Counter-Strike 2 produces extensive match and player telemetry, but players have no dependable way to convert this information into practical feedback. Important performance indicators—reaction timing, crosshair behavior, round-by-round analysis—are embedded in raw logs but not accessible through the game's default interfaces.
+              Counter-Strike 2 produces extensive match and player telemetry, but players have no dependable way to convert this information
+              into practical feedback. Important performance indicators—reaction timing, crosshair behavior, round-by-round analysis—are
+              embedded in raw logs but not accessible through the game's default interfaces.
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
-              Existing tools rely on manual replay review or third-party services that are unreliable for everyday players. The central problem: absence of a fault-tolerant distributed system capable of processing CS2 demo files at scale, ensuring consistency across a cluster, and delivering advanced analytics in real time.
+              Existing tools rely on manual replay review or third-party services that are unreliable for everyday players. The central
+              problem: absence of a fault-tolerant distributed system capable of processing CS2 demo files at scale, ensuring consistency
+              across a cluster, and delivering advanced analytics in real time.
             </p>
           </div>
 
@@ -97,9 +96,7 @@ export default function CS2AnalyticsPage() {
       <section className="border-b border-neutral-800 bg-neutral-950 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-4 text-4xl font-bold">System Architecture</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Four-layer architecture: Ingestion → Processing → Storage → Analytics
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Four-layer architecture: Ingestion → Processing → Storage → Analytics</p>
 
           {/* Architecture Diagram */}
           <div className="mb-12 overflow-hidden border border-neutral-800 bg-white">
@@ -120,9 +117,7 @@ export default function CS2AnalyticsPage() {
               <p className="mb-2 text-sm text-neutral-400">
                 Upload API receives demo files via REST, stores them in shared Docker volume, publishes file path to Kafka topic
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                REST → Volume → Kafka
-              </div>
+              <div className="font-mono text-xs text-neutral-600">REST → Volume → Kafka</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
@@ -130,9 +125,7 @@ export default function CS2AnalyticsPage() {
               <p className="mb-2 text-sm text-neutral-400">
                 Parser service consumes from Kafka, uses demoparser2 to extract telemetry, writes to database
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Kafka → Parser → DB Writer
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Kafka → Parser → DB Writer</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
@@ -140,9 +133,7 @@ export default function CS2AnalyticsPage() {
               <p className="mb-2 text-sm text-neutral-400">
                 3-node CockroachDB cluster with Raft consensus, automatic range partitioning, strong consistency
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Raft → Replication → Failover
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Raft → Replication → Failover</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
@@ -150,9 +141,7 @@ export default function CS2AnalyticsPage() {
               <p className="mb-2 text-sm text-neutral-400">
                 Read API + Grafana dashboards query distributed SQL for player stats, match trends, ML predictions
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                SQL → Aggregations → Dashboards
-              </div>
+              <div className="font-mono text-xs text-neutral-600">SQL → Aggregations → Dashboards</div>
             </div>
           </div>
         </div>
@@ -163,7 +152,8 @@ export default function CS2AnalyticsPage() {
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Methodology: Five Distributed Systems Pillars</h2>
           <p className="mb-12 text-lg text-neutral-400">
-            Fault-tolerant platform combining partitioning, replication, horizontal scaling, strong consistency, and optimized query processing
+            Fault-tolerant platform combining partitioning, replication, horizontal scaling, strong consistency, and optimized query
+            processing
           </p>
 
           {/* Methodology Infographic */}
@@ -191,55 +181,55 @@ export default function CS2AnalyticsPage() {
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">1. Data Partitioning and Distributed Storage</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                CockroachDB automatically divides indexed key ranges into distributed segments (ranges) and places them across nodes. Schema uses match_id (UUID) as primary key with foreign keys in player_stats, rounds, kills tables. Secondary indexes on player_id, round_number, and composite (match_id, round_number) enable efficient range-based queries.
+                CockroachDB automatically divides indexed key ranges into distributed segments (ranges) and places them across nodes. Schema
+                uses match_id (UUID) as primary key with foreign keys in player_stats, rounds, kills tables. Secondary indexes on player_id,
+                round_number, and composite (match_id, round_number) enable efficient range-based queries.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Automatic range partitioning → No manual sharding required
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Automatic range partitioning → No manual sharding required</div>
             </div>
 
             {/* Feature 2 */}
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">2. Replication and Fault Tolerance</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Each range replicated across three nodes using Raft protocol for leader election and commit writes. Parser continues submitting transactions as long as Raft leader is available. Kafka's persistent log ensures upload messages survive parser failures—if worker restarts mid-processing, message is re-delivered without loss.
+                Each range replicated across three nodes using Raft protocol for leader election and commit writes. Parser continues
+                submitting transactions as long as Raft leader is available. Kafka's persistent log ensures upload messages survive parser
+                failures—if worker restarts mid-processing, message is re-delivered without loss.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Raft consensus + Kafka retry semantics = zero data loss
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Raft consensus + Kafka retry semantics = zero data loss</div>
             </div>
 
             {/* Feature 3 */}
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">3. Scalability and Performance Handling</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                All services containerized in Docker: Upload API, Parser, Kafka, 3× CockroachDB nodes, Prometheus, Grafana. Each scales independently—additional parser containers can be launched to increase throughput, all listening to same Kafka topic. CockroachDB redistributes ranges when new nodes added, increasing storage capacity and query throughput.
+                All services containerized in Docker: Upload API, Parser, Kafka, 3× CockroachDB nodes, Prometheus, Grafana. Each scales
+                independently—additional parser containers can be launched to increase throughput, all listening to same Kafka topic.
+                CockroachDB redistributes ranges when new nodes added, increasing storage capacity and query throughput.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Horizontal scaling via containerization + range redistribution
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Horizontal scaling via containerization + range redistribution</div>
             </div>
 
             {/* Feature 4 */}
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">4. Consistency and Transaction Processing</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Serializable isolation level ensures match insertion, round rows, kill rows, and player statistics occur within same transactional context. DatabaseWriter calls commit() only after batch completes; exceptions trigger rollback and retry. Kafka's log structure guarantees ordered message delivery within single topic-partition.
+                Serializable isolation level ensures match insertion, round rows, kill rows, and player statistics occur within same
+                transactional context. DatabaseWriter calls commit() only after batch completes; exceptions trigger rollback and retry.
+                Kafka's log structure guarantees ordered message delivery within single topic-partition.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Atomic transactions + ordered delivery = complete match records
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Atomic transactions + ordered delivery = complete match records</div>
             </div>
 
             {/* Feature 5 */}
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">5. Query Processing and Analytical Techniques</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Parser precomputes aggregates (kill counts, death counts, headshot rates, ADR, damage totals, round winners, equipment value) during ingestion, written directly to player_stats and rounds tables. Grafana issues SQL queries with filters on indexed fields (player_id, round_number, map_name, timestamps), avoiding full table scans even with millions of rows.
+                Parser precomputes aggregates (kill counts, death counts, headshot rates, ADR, damage totals, round winners, equipment
+                value) during ingestion, written directly to player_stats and rounds tables. Grafana issues SQL queries with filters on
+                indexed fields (player_id, round_number, map_name, timestamps), avoiding full table scans even with millions of rows.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Precomputed stats + indexed queries = low-latency analytics
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Precomputed stats + indexed queries = low-latency analytics</div>
             </div>
           </div>
         </div>
@@ -249,9 +239,7 @@ export default function CS2AnalyticsPage() {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Evaluation and Results</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Evaluated during live session with continuous demo uploads
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Evaluated during live session with continuous demo uploads</p>
 
           {/* Monitoring Dashboard */}
           <div className="mb-12">
@@ -268,7 +256,9 @@ export default function CS2AnalyticsPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-neutral-500">
-              Figure 4.1: Grafana monitoring dashboard showing API response time, request throughput, upload counts, and ingestion stability. System processed 13 uploads with 0 parser failures. Average response time increased from near-zero to 30-55s under continuous load.
+              Figure 4.1: Grafana monitoring dashboard showing API response time, request throughput, upload counts, and ingestion
+              stability. System processed 13 uploads with 0 parser failures. Average response time increased from near-zero to 30-55s under
+              continuous load.
             </p>
           </div>
 
@@ -287,7 +277,8 @@ export default function CS2AnalyticsPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-neutral-500">
-              Figure 4.2: CockroachDB administrative console showing 3 live nodes, 68 fully replicated ranges, and 0 under-replicated or unavailable ranges—confirming replication guarantees maintained throughout workload.
+              Figure 4.2: CockroachDB administrative console showing 3 live nodes, 68 fully replicated ranges, and 0 under-replicated or
+              unavailable ranges—confirming replication guarantees maintained throughout workload.
             </p>
           </div>
 
@@ -306,7 +297,9 @@ export default function CS2AnalyticsPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-neutral-500">
-              Figure 4.3: Grafana dashboard displaying player-level statistics including K/D ratio (1.28), headshot percentage (41.8%), opening duel win rate (54.8%), clutch win rate (50.0%), and total matches (7). Time-series panels reflect match activity over selected period.
+              Figure 4.3: Grafana dashboard displaying player-level statistics including K/D ratio (1.28), headshot percentage (41.8%),
+              opening duel win rate (54.8%), clutch win rate (50.0%), and total matches (7). Time-series panels reflect match activity over
+              selected period.
             </p>
           </div>
 
@@ -325,7 +318,9 @@ export default function CS2AnalyticsPage() {
               </div>
             </div>
             <p className="mt-4 text-sm text-neutral-500">
-              Figure 4.4: Player Feedback API returned structured JSON with metric-level comparisons including K/D ratio (1.14 vs avg 1.01), ADR (0.0 vs avg 0.0), and headshot percentage (47.81% vs avg 46.32%), confirming service correctly queries and aggregates telemetry.
+              Figure 4.4: Player Feedback API returned structured JSON with metric-level comparisons including K/D ratio (1.14 vs avg 1.01),
+              ADR (0.0 vs avg 0.0), and headshot percentage (47.81% vs avg 46.32%), confirming service correctly queries and aggregates
+              telemetry.
             </p>
           </div>
 
@@ -399,7 +394,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">CockroachDB</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Distributed SQL database with automatic range partitioning, Raft consensus for replication, and strong consistency. Deployed as 3-node cluster in insecure mode on shared Docker bridge network.
+                Distributed SQL database with automatic range partitioning, Raft consensus for replication, and strong consistency. Deployed
+                as 3-node cluster in insecure mode on shared Docker bridge network.
               </p>
               <div className="font-mono text-xs text-neutral-600">Database · 3-Node Cluster · Raft Protocol</div>
             </div>
@@ -407,7 +403,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Apache Kafka</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Message queue for async processing. Upload API publishes file paths to match_queue topic; parser subscribes and consumes. Kafka's persistent log ensures messages survive worker failures.
+                Message queue for async processing. Upload API publishes file paths to match_queue topic; parser subscribes and consumes.
+                Kafka's persistent log ensures messages survive worker failures.
               </p>
               <div className="font-mono text-xs text-neutral-600">Message Queue · Durable Log · Retry Semantics</div>
             </div>
@@ -415,7 +412,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">demoparser2 (LaihoE)</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Python library for parsing CS2 demo files at tick level. Extracts player coordinates, view angles, combat events (shots, kills, assists, damage), grenade usage, and round transitions.
+                Python library for parsing CS2 demo files at tick level. Extracts player coordinates, view angles, combat events (shots,
+                kills, assists, damage), grenade usage, and round transitions.
               </p>
               <div className="font-mono text-xs text-neutral-600">Parser · Tick-Level Telemetry · Python Library</div>
             </div>
@@ -423,7 +421,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Flask (Python)</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Upload API and Read API both implemented in Flask. Upload API receives multipart/form-data demo files, stores to shared volume, publishes to Kafka. Read API queries CockroachDB for match data.
+                Upload API and Read API both implemented in Flask. Upload API receives multipart/form-data demo files, stores to shared
+                volume, publishes to Kafka. Read API queries CockroachDB for match data.
               </p>
               <div className="font-mono text-xs text-neutral-600">REST API · Python · File Upload</div>
             </div>
@@ -431,7 +430,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Docker Compose</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Orchestrates entire stack: 3× CockroachDB nodes, Kafka + Zookeeper, Upload API, Parser, Read API, Prometheus, Grafana. All communicate on isolated cs2-network bridge network.
+                Orchestrates entire stack: 3× CockroachDB nodes, Kafka + Zookeeper, Upload API, Parser, Read API, Prometheus, Grafana. All
+                communicate on isolated cs2-network bridge network.
               </p>
               <div className="font-mono text-xs text-neutral-600">Containerization · Orchestration · Networking</div>
             </div>
@@ -439,7 +439,8 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Grafana + Prometheus</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Prometheus scrapes service metrics (API latency, parser throughput, Kafka lag, DB performance). Grafana visualizes metrics and connects directly to CockroachDB for player analytics dashboards.
+                Prometheus scrapes service metrics (API latency, parser throughput, Kafka lag, DB performance). Grafana visualizes metrics
+                and connects directly to CockroachDB for player analytics dashboards.
               </p>
               <div className="font-mono text-xs text-neutral-600">Monitoring · Visualization · Real-Time Dashboards</div>
             </div>
@@ -451,9 +452,7 @@ export default function CS2AnalyticsPage() {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">The Data Challenge</h2>
-          <p className="mb-8 text-lg text-neutral-400">
-            Why distributed storage is essential for CS2 telemetry
-          </p>
+          <p className="mb-8 text-lg text-neutral-400">Why distributed storage is essential for CS2 telemetry</p>
 
           <div className="mb-12 border border-neutral-800 bg-neutral-950 p-8">
             <h3 className="mb-4 text-2xl font-bold">Scale of Data Generation</h3>
@@ -481,14 +480,16 @@ export default function CS2AnalyticsPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Ingestion Strategy</h3>
               <p className="text-neutral-400">
-                Raw demos stay in internal shared Docker volume, never exposed outside deployment. Parser extracts telemetry and writes to normalized CockroachDB schema with precomputed aggregates.
+                Raw demos stay in internal shared Docker volume, never exposed outside deployment. Parser extracts telemetry and writes to
+                normalized CockroachDB schema with precomputed aggregates.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Query Optimization</h3>
               <p className="text-neutral-400">
-                Precomputed views (round summaries, heatmap buckets, kill statistics) reduce need to scan millions of base rows. Read API and dashboards respond with low latency even under load.
+                Precomputed views (round summaries, heatmap buckets, kill statistics) reduce need to scan millions of base rows. Read API
+                and dashboards respond with low latency even under load.
               </p>
             </div>
           </div>
@@ -503,28 +504,36 @@ export default function CS2AnalyticsPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Distributed SQL Scales for Gaming Telemetry</h3>
               <p className="leading-relaxed text-neutral-400">
-                CockroachDB's automatic range partitioning and Raft-based replication eliminated manual sharding while maintaining strong consistency. System processed 13 uploads with 3/3 nodes live and 68/68 ranges fully replicated—zero data loss, zero under-replicated ranges.
+                CockroachDB's automatic range partitioning and Raft-based replication eliminated manual sharding while maintaining strong
+                consistency. System processed 13 uploads with 3/3 nodes live and 68/68 ranges fully replicated—zero data loss, zero
+                under-replicated ranges.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Kafka Decouples Ingestion from Processing</h3>
               <p className="leading-relaxed text-neutral-400">
-                Upload API publishes file paths to Kafka topic; parser consumes at its own pace. If parser fails mid-processing, Kafka's persistent log ensures message is re-delivered without loss. This separation prevents upstream failures from stalling the system.
+                Upload API publishes file paths to Kafka topic; parser consumes at its own pace. If parser fails mid-processing, Kafka's
+                persistent log ensures message is re-delivered without loss. This separation prevents upstream failures from stalling the
+                system.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Precomputed Aggregates Enable Real-Time Analytics</h3>
               <p className="leading-relaxed text-neutral-400">
-                Parser calculates kill counts, death counts, headshot rates, ADR, round winners during ingestion—written directly to player_stats and rounds tables. Grafana queries indexed fields (player_id, round_number, timestamps) without full table scans, keeping latency low even with millions of rows.
+                Parser calculates kill counts, death counts, headshot rates, ADR, round winners during ingestion—written directly to
+                player_stats and rounds tables. Grafana queries indexed fields (player_id, round_number, timestamps) without full table
+                scans, keeping latency low even with millions of rows.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Containerization Ensures Modularity and Fault Isolation</h3>
               <p className="leading-relaxed text-neutral-400">
-                All services run in isolated Docker containers on shared bridge network. Parser failure never brings down database or API services. Each component scales independently—additional parser containers can be launched to increase throughput without redeploying entire stack.
+                All services run in isolated Docker containers on shared bridge network. Parser failure never brings down database or API
+                services. Each component scales independently—additional parser containers can be launched to increase throughput without
+                redeploying entire stack.
               </p>
             </div>
           </div>

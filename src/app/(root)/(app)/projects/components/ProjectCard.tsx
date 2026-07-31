@@ -1,6 +1,5 @@
 'use client'
 
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import type { Project } from '../projectsData'
 
@@ -15,10 +14,10 @@ export default function ProjectCard({ project }: { project: Project }) {
 
   return (
     <div
-      onClick={handleCardClick}
       className={`group relative border border-neutral-200 bg-white p-6 transition-all hover:border-neutral-400 dark:border-neutral-800 dark:bg-black dark:hover:border-neutral-600 ${
         project.slug ? 'cursor-pointer' : ''
       }`}
+      onClick={handleCardClick}
     >
       <div className="mb-3 flex items-start justify-between">
         <div className="flex-1">
@@ -64,11 +63,11 @@ export default function ProjectCard({ project }: { project: Project }) {
         )}
         {project.link && (
           <a
-            href={project.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
             className="inline-flex items-center text-sm font-medium hover:underline"
+            href={project.link}
+            rel="noopener noreferrer"
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
           >
             GitHub
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

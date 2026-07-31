@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function AdasPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -7,9 +5,7 @@ export default function AdasPage() {
       <div className="border-b border-neutral-800 bg-black py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="mb-6 flex items-center justify-between">
-            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">
-              Computer Vision · Autonomous Driving
-            </div>
+            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">Computer Vision · Autonomous Driving</div>
             <a
               href="https://github.com/hithaishisurendra/ML-algorithms-for-ADAS"
               target="_blank"
@@ -22,14 +18,12 @@ export default function AdasPage() {
               View on GitHub
             </a>
           </div>
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-            Lane & Traffic Sign Detection for ADAS
-          </h1>
-          <p className="mb-4 text-2xl text-neutral-400">
-            Deep learning-powered perception for autonomous vehicles
-          </p>
+          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Lane & Traffic Sign Detection for ADAS</h1>
+          <p className="mb-4 text-2xl text-neutral-400">Deep learning-powered perception for autonomous vehicles</p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            Advanced Driver Assistance Systems need real-time perception in dynamic urban environments. This system combines semantic segmentation for lane detection with object detection for traffic sign recognition, tested across diverse weather and lighting conditions in the CARLA simulator.
+            Advanced Driver Assistance Systems need real-time perception in dynamic urban environments. This system combines semantic
+            segmentation for lane detection with object detection for traffic sign recognition, tested across diverse weather and lighting
+            conditions in the CARLA simulator.
           </p>
 
           {/* Key Metrics */}
@@ -61,19 +55,20 @@ export default function AdasPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              Autonomous vehicles and ADAS require robust real-time perception to navigate safely through complex urban environments. Two critical perception tasks are lane boundary detection (for lane keeping assistance) and traffic sign recognition (for regulatory compliance and driver warnings).
+              Autonomous vehicles and ADAS require robust real-time perception to navigate safely through complex urban environments. Two
+              critical perception tasks are lane boundary detection (for lane keeping assistance) and traffic sign recognition (for
+              regulatory compliance and driver warnings).
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
-              These systems must operate reliably across varying environmental conditions: different weather (clear, rainy, foggy), lighting (dawn, noon, dusk, night), and road types (urban, suburban, highway).
+              These systems must operate reliably across varying environmental conditions: different weather (clear, rainy, foggy), lighting
+              (dawn, noon, dusk, night), and road types (urban, suburban, highway).
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  1
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">1</div>
                 <h3 className="text-xl font-bold">Environmental Variability</h3>
               </div>
               <p className="text-neutral-400">
@@ -83,25 +78,23 @@ export default function AdasPage() {
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  2
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">2</div>
                 <h3 className="text-xl font-bold">Real-Time Requirements</h3>
               </div>
               <p className="text-neutral-400">
-                Safety-critical applications demand fast inference times. Frames must be processed at 30+ FPS for effective driver assistance.
+                Safety-critical applications demand fast inference times. Frames must be processed at 30+ FPS for effective driver
+                assistance.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  3
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">3</div>
                 <h3 className="text-xl font-bold">Pixel-Level Precision</h3>
               </div>
               <p className="text-neutral-400">
-                Lane detection requires dense pixel-wise segmentation. Bounding boxes are insufficient—we need exact lane boundary delineation.
+                Lane detection requires dense pixel-wise segmentation. Bounding boxes are insufficient—we need exact lane boundary
+                delineation.
               </p>
             </div>
           </div>
@@ -112,34 +105,48 @@ export default function AdasPage() {
       <section className="border-b border-neutral-800 bg-neutral-950 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Dual-Model Architecture</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Semantic Segmentation (SegNet) + Object Detection (YOLO)
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Semantic Segmentation (SegNet) + Object Detection (YOLO)</p>
 
           <div className="mb-12 grid gap-6 md:grid-cols-2">
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Lane Detection Pipeline</h3>
               <div className="space-y-3 font-mono text-xs text-neutral-500">
-                <div><span className="text-white">Input:</span> RGB image from camera (1920×1080)</div>
+                <div>
+                  <span className="text-white">Input:</span> RGB image from camera (1920×1080)
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">Encoder (VGG-16):</span> Feature extraction with max-pooling</div>
+                <div>
+                  <span className="text-neutral-400">Encoder (VGG-16):</span> Feature extraction with max-pooling
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">Decoder:</span> Upsampling using pooling indices</div>
+                <div>
+                  <span className="text-neutral-400">Decoder:</span> Upsampling using pooling indices
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-white">Output:</span> Pixel-wise lane segmentation mask</div>
+                <div>
+                  <span className="text-white">Output:</span> Pixel-wise lane segmentation mask
+                </div>
               </div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Traffic Sign Detection Pipeline</h3>
               <div className="space-y-3 font-mono text-xs text-neutral-500">
-                <div><span className="text-white">Input:</span> RGB image from camera (1920×1080)</div>
+                <div>
+                  <span className="text-white">Input:</span> RGB image from camera (1920×1080)
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">YOLO Backbone:</span> Darknet feature extraction</div>
+                <div>
+                  <span className="text-neutral-400">YOLO Backbone:</span> Darknet feature extraction
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">Detection Heads:</span> Grid-based bounding box prediction</div>
+                <div>
+                  <span className="text-neutral-400">Detection Heads:</span> Grid-based bounding box prediction
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-white">Output:</span> Bounding boxes + class labels + confidence</div>
+                <div>
+                  <span className="text-white">Output:</span> Bounding boxes + class labels + confidence
+                </div>
               </div>
             </div>
           </div>
@@ -147,7 +154,10 @@ export default function AdasPage() {
           <div className="mb-12 border-l-4 border-white bg-black p-6">
             <h4 className="mb-3 text-lg font-bold">Key Design Decision: Dual-Model Approach</h4>
             <p className="mb-3 leading-relaxed text-neutral-400">
-              Why not use a single multi-task network? <span className="text-white">Task-specific architectures outperform unified models</span> when tasks have fundamentally different output structures. Lane detection needs dense pixel predictions (semantic segmentation), while traffic sign detection needs sparse bounding boxes (object detection).
+              Why not use a single multi-task network?{' '}
+              <span className="text-white">Task-specific architectures outperform unified models</span> when tasks have fundamentally
+              different output structures. Lane detection needs dense pixel predictions (semantic segmentation), while traffic sign
+              detection needs sparse bounding boxes (object detection).
             </p>
             <div className="space-y-2 font-mono text-xs text-neutral-500">
               <div>SegNet: Encoder-decoder with pooling indices → Memory-efficient upsampling</div>
@@ -158,22 +168,14 @@ export default function AdasPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">SegNet Architecture</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                Encoder-decoder with symmetric structure
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                VGG-16 backbone · Max-pooling indices · Pixel-wise classification
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">Encoder-decoder with symmetric structure</p>
+              <div className="font-mono text-xs text-neutral-600">VGG-16 backbone · Max-pooling indices · Pixel-wise classification</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">YOLO Architecture</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                Single-stage detector for real-time inference
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Darknet-19 · Grid-based prediction · Anchor boxes
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">Single-stage detector for real-time inference</p>
+              <div className="font-mono text-xs text-neutral-600">Darknet-19 · Grid-based prediction · Anchor boxes</div>
             </div>
           </div>
         </div>
@@ -183,9 +185,7 @@ export default function AdasPage() {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Custom Dataset Creation</h2>
-          <p className="mb-8 text-lg text-neutral-400">
-            CARLA Simulator: Controlled Testing Across Environmental Variations
-          </p>
+          <p className="mb-8 text-lg text-neutral-400">CARLA Simulator: Controlled Testing Across Environmental Variations</p>
 
           <div className="grid gap-6 md:grid-cols-2">
             <div>
@@ -193,19 +193,28 @@ export default function AdasPage() {
               <ul className="space-y-3">
                 <li className="flex gap-3">
                   <span className="text-neutral-600">•</span>
-                  <span className="text-neutral-400"><span className="text-white">Controlled variability:</span> Programmatically generate diverse scenarios</span>
+                  <span className="text-neutral-400">
+                    <span className="text-white">Controlled variability:</span> Programmatically generate diverse scenarios
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-neutral-600">•</span>
-                  <span className="text-neutral-400"><span className="text-white">Automatic ground truth:</span> Perfect pixel-level annotations without manual labeling</span>
+                  <span className="text-neutral-400">
+                    <span className="text-white">Automatic ground truth:</span> Perfect pixel-level annotations without manual labeling
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-neutral-600">•</span>
-                  <span className="text-neutral-400"><span className="text-white">Safety:</span> Test edge cases (heavy fog, night, rain) without real-world risk</span>
+                  <span className="text-neutral-400">
+                    <span className="text-white">Safety:</span> Test edge cases (heavy fog, night, rain) without real-world risk
+                  </span>
                 </li>
                 <li className="flex gap-3">
                   <span className="text-neutral-600">•</span>
-                  <span className="text-neutral-400"><span className="text-white">Rapid iteration:</span> Generate 1,476 images across 8 towns faster than real-world collection</span>
+                  <span className="text-neutral-400">
+                    <span className="text-white">Rapid iteration:</span> Generate 1,476 images across 8 towns faster than real-world
+                    collection
+                  </span>
                 </li>
               </ul>
             </div>
@@ -266,15 +275,24 @@ export default function AdasPage() {
                   <ul className="space-y-2 text-sm text-neutral-400">
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Memory efficiency:</span> Stores max-pooling indices instead of full feature maps → 10× less memory than U-Net</span>
+                      <span>
+                        <span className="font-semibold">Memory efficiency:</span> Stores max-pooling indices instead of full feature maps →
+                        10× less memory than U-Net
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Boundary preservation:</span> Pooling indices enable precise upsampling, critical for thin lane boundaries</span>
+                      <span>
+                        <span className="font-semibold">Boundary preservation:</span> Pooling indices enable precise upsampling, critical
+                        for thin lane boundaries
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Inference speed:</span> Lighter decoder than U-Net → 94.80% accuracy with faster forward pass</span>
+                      <span>
+                        <span className="font-semibold">Inference speed:</span> Lighter decoder than U-Net → 94.80% accuracy with faster
+                        forward pass
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -283,15 +301,23 @@ export default function AdasPage() {
                   <ul className="space-y-2 text-sm text-neutral-400">
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">U-Net:</span> Skip connections store full feature maps → excessive memory for real-time systems</span>
+                      <span>
+                        <span className="font-semibold">U-Net:</span> Skip connections store full feature maps → excessive memory for
+                        real-time systems
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">DeepLab:</span> Atrous convolutions increase computation → slower inference, lower FPS</span>
+                      <span>
+                        <span className="font-semibold">DeepLab:</span> Atrous convolutions increase computation → slower inference, lower
+                        FPS
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">FCN:</span> Bilinear upsampling loses spatial detail → blurry lane boundaries</span>
+                      <span>
+                        <span className="font-semibold">FCN:</span> Bilinear upsampling loses spatial detail → blurry lane boundaries
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -310,15 +336,24 @@ export default function AdasPage() {
                   <ul className="space-y-2 text-sm text-neutral-400">
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Real-time inference:</span> Single-stage detector → 45+ FPS, meeting ADAS latency requirements</span>
+                      <span>
+                        <span className="font-semibold">Real-time inference:</span> Single-stage detector → 45+ FPS, meeting ADAS latency
+                        requirements
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Grid-based prediction:</span> Unified architecture predicts bounding boxes + classes in one forward pass</span>
+                      <span>
+                        <span className="font-semibold">Grid-based prediction:</span> Unified architecture predicts bounding boxes + classes
+                        in one forward pass
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-white">✓</span>
-                      <span><span className="font-semibold">Accuracy-speed trade-off:</span> 95.56% accuracy with 93.67% mAP, faster than two-stage detectors</span>
+                      <span>
+                        <span className="font-semibold">Accuracy-speed trade-off:</span> 95.56% accuracy with 93.67% mAP, faster than
+                        two-stage detectors
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -327,15 +362,23 @@ export default function AdasPage() {
                   <ul className="space-y-2 text-sm text-neutral-400">
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">Faster R-CNN:</span> Two-stage (RPN + detector) → 5-10 FPS, too slow for real-time ADAS</span>
+                      <span>
+                        <span className="font-semibold">Faster R-CNN:</span> Two-stage (RPN + detector) → 5-10 FPS, too slow for real-time
+                        ADAS
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">R-FCN:</span> Position-sensitive score maps → computational overhead, slower than YOLO</span>
+                      <span>
+                        <span className="font-semibold">R-FCN:</span> Position-sensitive score maps → computational overhead, slower than
+                        YOLO
+                      </span>
                     </li>
                     <li className="flex gap-2">
                       <span className="text-neutral-600">✗</span>
-                      <span><span className="font-semibold">SSD:</span> Comparable speed but lower accuracy on small traffic signs at distance</span>
+                      <span>
+                        <span className="font-semibold">SSD:</span> Comparable speed but lower accuracy on small traffic signs at distance
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -349,9 +392,7 @@ export default function AdasPage() {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Results</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Outperforming traditional baselines across both tasks
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Outperforming traditional baselines across both tasks</p>
 
           <div className="mb-12 space-y-8">
             {/* Lane Detection Results */}
@@ -433,7 +474,9 @@ export default function AdasPage() {
 
           <div className="border-l-2 border-neutral-700 bg-neutral-950 p-6">
             <p className="text-neutral-400">
-              <span className="font-semibold text-white">Published in IJRITCC 2023:</span> This work demonstrates that task-specific architectures (SegNet for segmentation, YOLO for detection) outperform unified multi-task networks. Both models achieved 93%+ metrics across accuracy, mAP, and F-score while maintaining real-time inference speeds.
+              <span className="font-semibold text-white">Published in IJRITCC 2023:</span> This work demonstrates that task-specific
+              architectures (SegNet for segmentation, YOLO for detection) outperform unified multi-task networks. Both models achieved 93%+
+              metrics across accuracy, mAP, and F-score while maintaining real-time inference speeds.
             </p>
           </div>
         </div>
@@ -447,7 +490,8 @@ export default function AdasPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">CARLA Simulator</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Open-source autonomous driving simulator. Generates photorealistic scenes with programmable weather, lighting, and traffic. Provides pixel-perfect ground truth for semantic segmentation.
+                Open-source autonomous driving simulator. Generates photorealistic scenes with programmable weather, lighting, and traffic.
+                Provides pixel-perfect ground truth for semantic segmentation.
               </p>
               <div className="font-mono text-xs text-neutral-600">Dataset Generation · 1,476 images · 8 towns</div>
             </div>
@@ -455,7 +499,8 @@ export default function AdasPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">SegNet (VGG-16)</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Encoder-decoder CNN with max-pooling indices for memory-efficient upsampling. VGG-16 backbone pre-trained on ImageNet, fine-tuned on lane detection.
+                Encoder-decoder CNN with max-pooling indices for memory-efficient upsampling. VGG-16 backbone pre-trained on ImageNet,
+                fine-tuned on lane detection.
               </p>
               <div className="font-mono text-xs text-neutral-600">Lane Detection · 94.80% accuracy · Pixel-wise segmentation</div>
             </div>
@@ -463,7 +508,8 @@ export default function AdasPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">YOLO (Darknet)</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Single-stage object detector with Darknet-19 backbone. Grid-based bounding box prediction with anchor boxes for multi-scale detection. Real-time inference at 45+ FPS.
+                Single-stage object detector with Darknet-19 backbone. Grid-based bounding box prediction with anchor boxes for multi-scale
+                detection. Real-time inference at 45+ FPS.
               </p>
               <div className="font-mono text-xs text-neutral-600">Traffic Signs · 95.56% accuracy · Real-time detection</div>
             </div>
@@ -471,7 +517,8 @@ export default function AdasPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">PyTorch / TensorFlow</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Deep learning frameworks for model training and inference. Adam optimizer with learning rate scheduling. Data augmentation: rotation, brightness, noise.
+                Deep learning frameworks for model training and inference. Adam optimizer with learning rate scheduling. Data augmentation:
+                rotation, brightness, noise.
               </p>
               <div className="font-mono text-xs text-neutral-600">Training · GPU acceleration · Batch size 16</div>
             </div>
@@ -487,35 +534,44 @@ export default function AdasPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Task-Specific Architectures Beat Multi-Task Networks</h3>
               <p className="leading-relaxed text-neutral-400">
-                Separating lane detection (SegNet) and traffic sign detection (YOLO) achieved 94.80% and 95.56% accuracy respectively. Multi-task networks sacrifice task-specific optimizations for shared representations, resulting in lower performance on both tasks.
+                Separating lane detection (SegNet) and traffic sign detection (YOLO) achieved 94.80% and 95.56% accuracy respectively.
+                Multi-task networks sacrifice task-specific optimizations for shared representations, resulting in lower performance on both
+                tasks.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Simulation Enables Systematic Evaluation</h3>
               <p className="leading-relaxed text-neutral-400">
-                CARLA's controlled environment allowed testing across 4 weather conditions × 4 times of day × 3 environment types = 48 scenario combinations. Real-world data collection would require months of driving and manual annotation. Simulation provided 1,476 pixel-perfect annotations instantly.
+                CARLA's controlled environment allowed testing across 4 weather conditions × 4 times of day × 3 environment types = 48
+                scenario combinations. Real-world data collection would require months of driving and manual annotation. Simulation provided
+                1,476 pixel-perfect annotations instantly.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Memory-Efficient Segmentation for Real-Time ADAS</h3>
               <p className="leading-relaxed text-neutral-400">
-                SegNet's pooling indices reduce memory footprint by 10× compared to U-Net's skip connections while maintaining 94.80% accuracy. Critical for embedded automotive systems with limited GPU memory. YOLO's single-stage design achieves 45+ FPS, meeting real-time requirements.
+                SegNet's pooling indices reduce memory footprint by 10× compared to U-Net's skip connections while maintaining 94.80%
+                accuracy. Critical for embedded automotive systems with limited GPU memory. YOLO's single-stage design achieves 45+ FPS,
+                meeting real-time requirements.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Robust to Environmental Variations</h3>
               <p className="leading-relaxed text-neutral-400">
-                Both models maintained high accuracy across fog, rain, and night conditions. Data augmentation and diverse training scenarios prevented overfitting to ideal conditions. 5.20% error rate for lanes and 4.44% for signs demonstrate production-ready robustness.
+                Both models maintained high accuracy across fog, rain, and night conditions. Data augmentation and diverse training
+                scenarios prevented overfitting to ideal conditions. 5.20% error rate for lanes and 4.44% for signs demonstrate
+                production-ready robustness.
               </p>
             </div>
           </div>
 
           <div className="mt-12 border border-neutral-800 bg-black p-6">
             <p className="text-sm text-neutral-500">
-              <span className="font-semibold text-white">Publication:</span> "Lane and Traffic Sign Detection for ADAS using Deep Learning" — International Journal on Recent and Innovation Trends in Computing and Communication (IJRITCC), November 2023
+              <span className="font-semibold text-white">Publication:</span> "Lane and Traffic Sign Detection for ADAS using Deep Learning"
+              — International Journal on Recent and Innovation Trends in Computing and Communication (IJRITCC), November 2023
             </p>
             <p className="mt-2 text-sm text-neutral-500">
               <span className="font-semibold text-white">Institution:</span> R.V. College of Engineering, Bangalore, India

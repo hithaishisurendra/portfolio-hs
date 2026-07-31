@@ -7,9 +7,7 @@ export default function SWEBenchPage() {
       <div className="border-b border-neutral-800 bg-black py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="mb-6 flex items-center justify-between">
-            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">
-              Agentic AI · Automated Bug Fixing
-            </div>
+            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">Agentic AI · Automated Bug Fixing</div>
             <a
               href="https://github.com/hithaishisurendra/Multi-agent-swe-bench"
               target="_blank"
@@ -22,14 +20,11 @@ export default function SWEBenchPage() {
               View on GitHub
             </a>
           </div>
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-            Multi-Agent SWE-bench System
-          </h1>
-          <p className="mb-4 text-2xl text-neutral-400">
-            Graph-augmented automated bug fixing for real GitHub issues
-          </p>
+          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Multi-Agent SWE-bench System</h1>
+          <p className="mb-4 text-2xl text-neutral-400">Graph-augmented automated bug fixing for real GitHub issues</p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            Single-shot LLMs generate syntactically valid patches with correct diff headers, but context lines don't match actual repository state. This system fixes that through tree-sitter dependency graphs and evidence-routed feedback loops.
+            Single-shot LLMs generate syntactically valid patches with correct diff headers, but context lines don't match actual repository
+            state. This system fixes that through tree-sitter dependency graphs and evidence-routed feedback loops.
           </p>
 
           {/* Key Metrics */}
@@ -71,9 +66,7 @@ export default function SWEBenchPage() {
           <div className="grid gap-6 md:grid-cols-3">
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  1
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">1</div>
                 <h3 className="text-xl font-bold">Localization Blindness</h3>
               </div>
               <p className="text-neutral-400">
@@ -83,26 +76,18 @@ export default function SWEBenchPage() {
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  2
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">2</div>
                 <h3 className="text-xl font-bold">Context Hallucination</h3>
               </div>
-              <p className="text-neutral-400">
-                Generate plausible-looking context lines that don't match base commit → git apply fails.
-              </p>
+              <p className="text-neutral-400">Generate plausible-looking context lines that don't match base commit → git apply fails.</p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  3
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">3</div>
                 <h3 className="text-xl font-bold">No Recovery Path</h3>
               </div>
-              <p className="text-neutral-400">
-                Terminal failures with no feedback loop to retry or refine approach.
-              </p>
+              <p className="text-neutral-400">Terminal failures with no feedback loop to retry or refine approach.</p>
             </div>
           </div>
         </div>
@@ -112,9 +97,7 @@ export default function SWEBenchPage() {
       <section className="border-b border-neutral-800 bg-neutral-950 py-20">
         <div className="mx-auto max-w-6xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Architecture</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            4 Specialized Agents + Evidence-Routed Feedback
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">4 Specialized Agents + Evidence-Routed Feedback</p>
 
           {/* Architecture Diagram */}
           <div className="mb-12 overflow-hidden border border-neutral-800 bg-white">
@@ -131,7 +114,9 @@ export default function SWEBenchPage() {
 
           <div className="mb-12 font-mono text-sm text-neutral-500">
             <div>Issue + Code Graph (tree-sitter) → Planner → Localizer → Diagnostician → Patcher → Validator</div>
-            <div className="mt-2 pl-20">↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑</div>
+            <div className="mt-2 pl-20">
+              ↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑
+            </div>
             <div className="mt-2 pl-20">└───────────┴────────────┴────────────┘</div>
             <div className="mt-2 pl-20 text-neutral-400">Evidence-Routed Feedback</div>
           </div>
@@ -139,42 +124,26 @@ export default function SWEBenchPage() {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Planner</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                Extract keywords, classify issue type
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Input: Issue text → Output: Search strategy
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">Extract keywords, classify issue type</p>
+              <div className="font-mono text-xs text-neutral-600">Input: Issue text → Output: Search strategy</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Localizer</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                3-pass retrieval (keyword + grep + graph)
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Input: Keywords → Output: Ranked files + snippets
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">3-pass retrieval (keyword + grep + graph)</p>
+              <div className="font-mono text-xs text-neutral-600">Input: Keywords → Output: Ranked files + snippets</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Diagnostician</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                Root cause analysis
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Input: Localized code + tests → Output: Fix plan
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">Root cause analysis</p>
+              <div className="font-mono text-xs text-neutral-600">Input: Localized code + tests → Output: Fix plan</div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Patcher</h3>
-              <p className="mb-2 text-sm text-neutral-400">
-                Generate unified diff from real source
-              </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Input: Fix plan + source → Output: git-ready patch
-              </div>
+              <p className="mb-2 text-sm text-neutral-400">Generate unified diff from real source</p>
+              <div className="font-mono text-xs text-neutral-600">Input: Fix plan + source → Output: git-ready patch</div>
             </div>
           </div>
 
@@ -198,7 +167,8 @@ export default function SWEBenchPage() {
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Why Tree-Sitter Dependency Graph?</h2>
           <p className="mb-8 text-lg text-neutral-400">
-            Issue text rarely mentions exact files. "Segfault in compression" might require compress.c + zstd_internal.h + compress_impl.c—none contain "segfault" in names.
+            Issue text rarely mentions exact files. "Segfault in compression" might require compress.c + zstd_internal.h +
+            compress_impl.c—none contain "segfault" in names.
           </p>
 
           <div className="grid gap-6 md:grid-cols-2">
@@ -243,9 +213,7 @@ export default function SWEBenchPage() {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Results</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Evaluated on 174 instances across 3 repositories
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Evaluated on 174 instances across 3 repositories</p>
 
           <div className="mb-12 space-y-8">
             {/* Localization */}
@@ -340,7 +308,8 @@ export default function SWEBenchPage() {
 
           <div className="border-l-2 border-neutral-700 bg-neutral-950 p-6">
             <p className="text-neutral-400">
-              <span className="font-semibold text-white">0% Resolution Across All Systems:</span> Every system (single-shot and agentic) achieved 0% resolution. The apply-to-resolve gap is SWE-bench-C's central unsolved challenge.
+              <span className="font-semibold text-white">0% Resolution Across All Systems:</span> Every system (single-shot and agentic)
+              achieved 0% resolution. The apply-to-resolve gap is SWE-bench-C's central unsolved challenge.
             </p>
           </div>
         </div>
@@ -394,28 +363,32 @@ export default function SWEBenchPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Localization is Solvable</h3>
               <p className="leading-relaxed text-neutral-400">
-                12.6% vs. 0.6-2.9%: Tree-sitter dependency graphs + 3-pass ranking (keyword + grep + graph neighborhood) beats single-shot prompting by +340%. Graph-augmented retrieval > prompt engineering for file localization.
+                12.6% vs. 0.6-2.9%: Tree-sitter dependency graphs + 3-pass ranking (keyword + grep + graph neighborhood) beats single-shot
+                prompting by +340%. Graph-augmented retrieval {'>'}prompt engineering for file localization.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Evidence Routing Cuts Costs</h3>
               <p className="leading-relaxed text-neutral-400">
-                60% token reduction per retry. Routes failures to specific agents (apply → Localizer, compile → Patcher, test → Diagnostician) instead of full pipeline re-runs. Max 2 retries per slot prevents infinite loops.
+                60% token reduction per retry. Routes failures to specific agents (apply → Localizer, compile → Patcher, test →
+                Diagnostician) instead of full pipeline re-runs. Max 2 retries per slot prevents infinite loops.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Hunk Context Matching is the Wall</h3>
               <p className="leading-relaxed text-neutral-400">
-                60% apply failures even with real source access. Byte-for-byte hunk context generation remains hard—trailing whitespace and line endings cause git apply to fail. The apply-to-resolve gap is SWE-bench-C's frontier challenge.
+                60% apply failures even with real source access. Byte-for-byte hunk context generation remains hard—trailing whitespace and
+                line endings cause git apply to fail. The apply-to-resolve gap is SWE-bench-C's frontier challenge.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">0% Resolution ≠ Failure</h3>
               <p className="leading-relaxed text-neutral-400">
-                SWE-bench-C measures repository-level reasoning, not code generation. Progressive metrics show localization bottleneck solved (+340%), partial compilation progress (+80%), but resolution frontier remains unsolved for all systems.
+                SWE-bench-C measures repository-level reasoning, not code generation. Progressive metrics show localization bottleneck
+                solved (+340%), partial compilation progress (+80%), but resolution frontier remains unsolved for all systems.
               </p>
             </div>
           </div>

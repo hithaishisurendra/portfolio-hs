@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
-import SWEBenchPage from './swe-bench-page'
-import CS2AnalyticsPage from './cs2-analytics-page'
 import AdasPage from './adas-page'
+import CS2AnalyticsPage from './cs2-analytics-page'
 import EvaPage from './eva-page'
 import ResilientMessagingPage from './resilient-messaging-page'
+import SWEBenchPage from './swe-bench-page'
 
 interface ProjectPageProps {
   params: {
@@ -108,9 +108,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
       <div className="border-b border-neutral-800 bg-black py-20">
         <div className="mx-auto max-w-5xl px-6">
           <div className="mb-6 flex items-center justify-between">
-            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">
-              NLP & AI · Multi-Agent Systems
-            </div>
+            <div className="text-sm font-mono uppercase tracking-wider text-neutral-500">NLP & AI · Multi-Agent Systems</div>
             <a
               href="https://github.com/hithaishisurendra/Multi-agent-summarization-pipeline"
               target="_blank"
@@ -123,14 +121,11 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
               View on GitHub
             </a>
           </div>
-          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">
-            Multi-Agent Financial QA
-          </h1>
-          <p className="mb-4 text-2xl text-neutral-400">
-            Question-answering system for hybrid table-and-text financial data
-          </p>
+          <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Multi-Agent Financial QA</h1>
+          <p className="mb-4 text-2xl text-neutral-400">Question-answering system for hybrid table-and-text financial data</p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            Users ask questions like "What was the percentage change in revenue from 2018 to 2019?" and the system answers by reasoning over both structured tables and unstructured paragraphs using a sequential multi-agent pipeline with RAG.
+            Users ask questions like "What was the percentage change in revenue from 2018 to 2019?" and the system answers by reasoning over
+            both structured tables and unstructured paragraphs using a sequential multi-agent pipeline with RAG.
           </p>
 
           {/* Key Metrics */}
@@ -162,7 +157,8 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              TAT-QA has 16,552 questions paired with 2,757 financial report contexts. Each context mixes structured tables with unstructured paragraphs explaining why numbers changed.
+              TAT-QA has 16,552 questions paired with 2,757 financial report contexts. Each context mixes structured tables with
+              unstructured paragraphs explaining why numbers changed.
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
               Single large language models fail at this consistently. I identified four critical failure modes:
@@ -172,9 +168,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           <div className="grid gap-6 md:grid-cols-2">
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  1
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">1</div>
                 <h3 className="text-xl font-bold">Numerical Errors</h3>
               </div>
               <p className="text-neutral-400">
@@ -184,33 +178,29 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  2
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">2</div>
                 <h3 className="text-xl font-bold">Context Misalignment</h3>
               </div>
               <p className="text-neutral-400">
-                Models hyper-focus on tables and miss the "why" in text, or latch onto narrative and ignore numbers. Financial analysis needs both.
+                Models hyper-focus on tables and miss the "why" in text, or latch onto narrative and ignore numbers. Financial analysis
+                needs both.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  3
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">3</div>
                 <h3 className="text-xl font-bold">Token Limits</h3>
               </div>
               <p className="text-neutral-400">
-                47 paragraphs × 150 tokens = 7,050 tokens, plus 500 for tables. Feeding everything causes context overflow and attention dilution.
+                47 paragraphs × 150 tokens = 7,050 tokens, plus 500 for tables. Feeding everything causes context overflow and attention
+                dilution.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <div className="mb-4 flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">
-                  4
-                </div>
+                <div className="flex h-10 w-10 items-center justify-center border border-neutral-700 font-mono text-xl font-bold">4</div>
                 <h3 className="text-xl font-bold">No Specialization</h3>
               </div>
               <p className="text-neutral-400">
@@ -229,21 +219,23 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           {/* Pipeline 1 - Failed Approach */}
           <div className="mb-16 border border-neutral-800 bg-black p-8">
             <div className="mb-6 flex items-center gap-3">
-              <div className="rounded border border-neutral-700 bg-neutral-900 px-3 py-1 font-mono text-sm">
-                Pipeline 1
-              </div>
+              <div className="rounded border border-neutral-700 bg-neutral-900 px-3 py-1 font-mono text-sm">Pipeline 1</div>
               <div className="text-sm text-neutral-500">Router-Based Delegation</div>
               <div className="ml-auto text-sm text-neutral-600">❌ FAILED</div>
             </div>
 
             <p className="mb-6 leading-relaxed text-neutral-400">
-              Initial hypothesis: Dynamic router classifies questions as "financial" (arithmetic) or "logical" (comparison) and routes to specialized agents. Single-shot CoT improved accuracy (+5.1pp routing, +4.8pp logical reasoning).
+              Initial hypothesis: Dynamic router classifies questions as "financial" (arithmetic) or "logical" (comparison) and routes to
+              specialized agents. Single-shot CoT improved accuracy (+5.1pp routing, +4.8pp logical reasoning).
             </p>
 
             <div className="border-l-2 border-neutral-800 bg-neutral-950 p-6">
               <h4 className="mb-3 text-lg font-bold text-white">The Fatal Flaw</h4>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                The router <span className="text-white">only passed the question</span> to downstream agents, not the full context. When it routed "What was the percentage change in revenue?" to the Financial Agent, that agent received the question but <span className="text-white">not the table</span> with revenue data or the <span className="text-white">paragraph</span> explaining revenue categories.
+                The router <span className="text-white">only passed the question</span> to downstream agents, not the full context. When it
+                routed "What was the percentage change in revenue?" to the Financial Agent, that agent received the question but{' '}
+                <span className="text-white">not the table</span> with revenue data or the <span className="text-white">paragraph</span>{' '}
+                explaining revenue categories.
               </p>
               <p className="font-mono text-sm text-neutral-500">
                 Result: Information silos. Agents made decisions with incomplete information.
@@ -254,9 +246,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
           {/* Pipeline 2 - Final Solution */}
           <div>
             <div className="mb-6 flex items-center gap-3">
-              <div className="rounded border border-white bg-white px-3 py-1 font-mono text-sm text-black">
-                Pipeline 2
-              </div>
+              <div className="rounded border border-white bg-white px-3 py-1 font-mono text-sm text-black">Pipeline 2</div>
               <div className="text-sm text-neutral-400">Sequential Multi-Agent with Question-Driven RAG</div>
               <div className="ml-auto text-sm text-white">✓ SOLUTION</div>
             </div>
@@ -276,20 +266,35 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="border border-neutral-800 bg-black p-8">
               <h3 className="mb-4 text-2xl font-bold">The Key Insight</h3>
               <p className="mb-6 text-lg leading-relaxed text-neutral-400">
-                <span className="text-white">The user question must flow through every stage of the pipeline</span>, not just arrive at the end. The question drives RAG retrieval, guides table extraction, informs context enrichment, and enables persona inference.
+                <span className="text-white">The user question must flow through every stage of the pipeline</span>, not just arrive at the
+                end. The question drives RAG retrieval, guides table extraction, informs context enrichment, and enables persona inference.
               </p>
               <div className="space-y-3 font-mono text-sm text-neutral-500">
-                <div><span className="text-white">USER QUESTION:</span> "What was the percentage change in revenue from 2018 to 2019?"</div>
+                <div>
+                  <span className="text-white">USER QUESTION:</span> "What was the percentage change in revenue from 2018 to 2019?"
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">RAG LAYER:</span> Question embedding → FAISS search → Top-3 passages (450 tokens, 94% reduction)</div>
+                <div>
+                  <span className="text-neutral-400">RAG LAYER:</span> Question embedding → FAISS search → Top-3 passages (450 tokens, 94%
+                  reduction)
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">TABLE AGENT (TAPAS):</span> Table + Question → "2018: $1.2M, 2019: $1.5M"</div>
+                <div>
+                  <span className="text-neutral-400">TABLE AGENT (TAPAS):</span> Table + Question → "2018: $1.2M, 2019: $1.5M"
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">CONTEXT AGENT (FLAN-T5-XL):</span> Retrieved passages + Question → "Growth driven by defense contracts"</div>
+                <div>
+                  <span className="text-neutral-400">CONTEXT AGENT (FLAN-T5-XL):</span> Retrieved passages + Question → "Growth driven by
+                  defense contracts"
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">SELECTRA (FLAN-T5-Small):</span> Question phrasing → "financial analyst"</div>
+                <div>
+                  <span className="text-neutral-400">SELECTRA (FLAN-T5-Small):</span> Question phrasing → "financial analyst"
+                </div>
                 <div className="pl-4">↓</div>
-                <div><span className="text-neutral-400">ORCHESTRATOR (Gemini 2.5 Flash):</span> All outputs + Question → Persona-adapted answer</div>
+                <div>
+                  <span className="text-neutral-400">ORCHESTRATOR (Gemini 2.5 Flash):</span> All outputs + Question → Persona-adapted answer
+                </div>
               </div>
             </div>
           </div>
@@ -300,9 +305,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
       <section className="border-b border-neutral-800 py-20">
         <div className="mx-auto max-w-5xl px-6">
           <h2 className="mb-4 text-4xl font-bold">Performance</h2>
-          <p className="mb-12 text-lg text-neutral-400">
-            Chain-of-Thought Improvements (Pipeline 1 Experiments)
-          </p>
+          <p className="mb-12 text-lg text-neutral-400">Chain-of-Thought Improvements (Pipeline 1 Experiments)</p>
 
           <div className="mb-12 space-y-8">
             {/* Dynamic Routing */}
@@ -311,9 +314,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 <h3 className="text-xl font-bold">Dynamic Routing</h3>
                 <div className="font-mono text-2xl font-bold">+5.1pp</div>
               </div>
-              <div className="mb-2 text-sm uppercase tracking-wide text-neutral-500">
-                Zero-Shot CoT → Single-Shot CoT
-              </div>
+              <div className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Zero-Shot CoT → Single-Shot CoT</div>
               <div className="flex gap-4">
                 <div className="flex-1">
                   <div className="mb-2 font-mono text-sm text-neutral-500">49.6%</div>
@@ -336,9 +337,7 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
                 <h3 className="text-xl font-bold">Logical Reasoning</h3>
                 <div className="font-mono text-2xl font-bold">+4.8pp</div>
               </div>
-              <div className="mb-2 text-sm uppercase tracking-wide text-neutral-500">
-                Zero-Shot CoT → Single-Shot CoT
-              </div>
+              <div className="mb-2 text-sm uppercase tracking-wide text-neutral-500">Zero-Shot CoT → Single-Shot CoT</div>
               <div className="flex gap-4">
                 <div className="flex-1">
                   <div className="mb-2 font-mono text-sm text-neutral-500">69.3%</div>
@@ -358,7 +357,9 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
           <div className="mb-12 border-l-2 border-neutral-700 bg-neutral-950 p-6">
             <p className="text-neutral-400">
-              <span className="font-semibold text-white">Pipeline 2 Component F1 Scores:</span> Table Agent 25.3%, Context Agent 29.4%. Low F1 reflects exact span extraction difficulty on complex financial data. The real value: transparent CoT traces for debugging and 94% token reduction while maintaining 87% context coverage.
+              <span className="font-semibold text-white">Pipeline 2 Component F1 Scores:</span> Table Agent 25.3%, Context Agent 29.4%. Low
+              F1 reflects exact span extraction difficulty on complex financial data. The real value: transparent CoT traces for debugging
+              and 94% token reduction while maintaining 87% context coverage.
             </p>
           </div>
 
@@ -493,7 +494,8 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
           <div className="mt-8 border border-neutral-800 bg-neutral-950 p-6">
             <p className="text-neutral-400">
-              <span className="font-semibold text-white">Production deployment at 1M queries/month:</span> Pipeline 2: $275/month · GPT-4: $44,000/month · <span className="text-white">Savings: 99.4%</span>
+              <span className="font-semibold text-white">Production deployment at 1M queries/month:</span> Pipeline 2: $275/month · GPT-4:
+              $44,000/month · <span className="text-white">Savings: 99.4%</span>
             </p>
           </div>
         </div>
@@ -507,28 +509,32 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Question-Driven RAG: 94% Token Reduction</h3>
               <p className="leading-relaxed text-neutral-400">
-                Instead of 7,550 tokens per document, RAG filters to 450 tokens (top-3 passages) while maintaining 87% coverage of gold-standard answer contexts. The user's question drives retrieval—semantic search beats keyword matching.
+                Instead of 7,550 tokens per document, RAG filters to 450 tokens (top-3 passages) while maintaining 87% coverage of
+                gold-standard answer contexts. The user's question drives retrieval—semantic search beats keyword matching.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Context Preservation via Sequential Flow</h3>
               <p className="leading-relaxed text-neutral-400">
-                Pipeline 1 failed catastrophically because the router discarded context. Pipeline 2 passes full agent outputs + CoT traces forward—no information gets siloed. The orchestrator receives the complete reasoning chain.
+                Pipeline 1 failed catastrophically because the router discarded context. Pipeline 2 passes full agent outputs + CoT traces
+                forward—no information gets siloed. The orchestrator receives the complete reasoning chain.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Transparent Failures via CoT Traces</h3>
               <p className="leading-relaxed text-neutral-400">
-                Low F1 scores (25.3% table, 29.4% context) expose where models struggle—unlike black-box systems. CoT traces show exactly which cells TAPAS attended to and what entities FLAN-T5 identified. Debuggable failures.
+                Low F1 scores (25.3% table, 29.4% context) expose where models struggle—unlike black-box systems. CoT traces show exactly
+                which cells TAPAS attended to and what entities FLAN-T5 identified. Debuggable failures.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Cost-Effective Architecture</h3>
               <p className="leading-relaxed text-neutral-400">
-                Most agents run on CPU with local inference. Only Gemini orchestration uses API. Total latency: 1.7 seconds. Total cost: $0.000275 per query, 160× cheaper than GPT-4 single-shot approach.
+                Most agents run on CPU with local inference. Only Gemini orchestration uses API. Total latency: 1.7 seconds. Total cost:
+                $0.000275 per query, 160× cheaper than GPT-4 single-shot approach.
               </p>
             </div>
           </div>
