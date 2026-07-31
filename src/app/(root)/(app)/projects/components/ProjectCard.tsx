@@ -1,16 +1,24 @@
 'use client'
 
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import type { Project } from '../projectsData'
 
 export default function ProjectCard({ project }: { project: Project }) {
-  const CardWrapper = project.slug ? Link : 'div'
-  const wrapperProps = project.slug ? { href: `/projects/${project.slug}` } : {}
+  const router = useRouter()
+
+  const handleCardClick = () => {
+    if (project.slug) {
+      router.push(`/projects/${project.slug}`)
+    }
+  }
 
   return (
-    <CardWrapper
-      {...wrapperProps}
-      className="group relative border border-neutral-200 bg-white p-6 transition-all hover:border-neutral-400 dark:border-neutral-800 dark:bg-black dark:hover:border-neutral-600"
+    <div
+      onClick={handleCardClick}
+      className={`group relative border border-neutral-200 bg-white p-6 transition-all hover:border-neutral-400 dark:border-neutral-800 dark:bg-black dark:hover:border-neutral-600 ${
+        project.slug ? 'cursor-pointer' : ''
+      }`}
     >
       <div className="mb-3 flex items-start justify-between">
         <div className="flex-1">
@@ -47,12 +55,12 @@ export default function ProjectCard({ project }: { project: Project }) {
 
       <div className="flex items-center gap-4">
         {project.slug && (
-          <div className="inline-flex items-center text-sm font-medium hover:underline">
+          <span className="inline-flex items-center text-sm font-medium hover:underline">
             View Details
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
-          </div>
+          </span>
         )}
         {project.link && (
           <a
@@ -74,6 +82,6 @@ export default function ProjectCard({ project }: { project: Project }) {
           </a>
         )}
       </div>
-    </CardWrapper>
+    </div>
   )
 }
