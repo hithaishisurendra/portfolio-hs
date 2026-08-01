@@ -227,7 +227,8 @@ export const projects: Project[] = [
     date: 'Jan 2025 – May 2025',
     category: 'UX Research',
     slug: 'arizona-mvd-redesign',
-    websiteLink: 'https://www.figma.com/proto/675JOdl9FxHbjZhvn1o4eE/CSE463UsabilityTestPrototype?node-id=3-103&p=f&t=rwzD2nbPZ7LkNriV-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A103',
+    websiteLink:
+      'https://www.figma.com/proto/675JOdl9FxHbjZhvn1o4eE/CSE463UsabilityTestPrototype?node-id=3-103&p=f&t=rwzD2nbPZ7LkNriV-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A103',
     highlights: [
       'Prototype reduced license renewal completion time from 268s to 77s (t(10)=2.67, p<.05) and eliminated document clarity failures — 0% to 100% success across all tasks',
       'Identified 4 core failure modes on original site: overlapping homepages, buried document requirements in PDFs, ambiguous terminology, and broken cross-site redirects',

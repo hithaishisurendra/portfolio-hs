@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function SignedNetworkPredictionPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -12,9 +10,9 @@ export default function SignedNetworkPredictionPage() {
           <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Signed Network Link Prediction</h1>
           <p className="mb-4 text-2xl text-neutral-400">Predicting trust and distrust in social networks using sign-aware GNNs</p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            Comparative study of signed link prediction on Epinions and Slashdot networks. Evaluated Logistic Regression with
-            Structural Balance Theory features, Decoupled GNN with separated positive/negative message passing, and Signed Graph
-            Attention Network with sign-specific attention kernels.
+            Comparative study of signed link prediction on Epinions and Slashdot networks. Evaluated Logistic Regression with Structural
+            Balance Theory features, Decoupled GNN with separated positive/negative message passing, and Signed Graph Attention Network with
+            sign-specific attention kernels.
           </p>
 
           {/* Key Metrics */}
@@ -46,14 +44,14 @@ export default function SignedNetworkPredictionPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              Signed networks encode polarity in user relationships—trust vs. distrust, friend vs. foe—revealing patterns of
-              endorsement, disagreement, and conflict that unsigned graphs cannot capture. Traditional link prediction focuses only on
-              edge existence; signed link prediction asks: if an edge forms, will it be positive or negative?
+              Signed networks encode polarity in user relationships—trust vs. distrust, friend vs. foe—revealing patterns of endorsement,
+              disagreement, and conflict that unsigned graphs cannot capture. Traditional link prediction focuses only on edge existence;
+              signed link prediction asks: if an edge forms, will it be positive or negative?
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
-              Real networks are highly imbalanced: Epinions has only 14% negative edges, Slashdot 23%. Standard GNNs aggregate messages
-              from all neighbors identically, blending positive and negative signals so they can cancel or distort each other. Effective
-              models must preserve polarity during message passing.
+              Real networks are highly imbalanced: Epinions has only 14% negative edges, Slashdot 23%. Standard GNNs aggregate messages from
+              all neighbors identically, blending positive and negative signals so they can cancel or distort each other. Effective models
+              must preserve polarity during message passing.
             </p>
           </div>
 
@@ -61,8 +59,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Class Imbalance</h3>
               <p className="text-neutral-400">
-                Trivial classifier predicting "all positive" achieves high accuracy but fails to identify negative links. F1 and AUC
-                metrics critical for evaluating minority class performance.
+                Trivial classifier predicting "all positive" achieves high accuracy but fails to identify negative links. F1 and AUC metrics
+                critical for evaluating minority class performance.
               </p>
             </div>
 
@@ -128,8 +126,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Epinions</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Consumer review platform where users explicitly mark other reviewers as trusted or distrusted. Trust edges tend to be
-                stable and correlate with shared product preferences. Structural balance patterns are strong and consistent.
+                Consumer review platform where users explicitly mark other reviewers as trusted or distrusted. Trust edges tend to be stable
+                and correlate with shared product preferences. Structural balance patterns are strong and consistent.
               </p>
               <div className="font-mono text-xs text-neutral-600">Clean trust semantics · Strong balance patterns</div>
             </div>
@@ -156,9 +154,9 @@ export default function SignedNetworkPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-2xl font-bold">1. Logistic Regression Baseline</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                18-dimensional feature vector combining degree, centrality, similarity, and triad statistics derived from Structural
-                Balance Theory. Features include positive/negative in-degree, out-degree, PageRank scores, Jaccard similarity over
-                positive neighborhoods, and counts of balanced/unbalanced triads.
+                18-dimensional feature vector combining degree, centrality, similarity, and triad statistics derived from Structural Balance
+                Theory. Features include positive/negative in-degree, out-degree, PageRank scores, Jaccard similarity over positive
+                neighborhoods, and counts of balanced/unbalanced triads.
               </p>
               <div className="font-mono text-xs text-neutral-600">
                 Classical approach: explicit feature engineering + logistic classifier
@@ -170,12 +168,10 @@ export default function SignedNetworkPredictionPage() {
               <h3 className="mb-3 text-2xl font-bold">2. Decoupled Graph Convolutional Network</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
                 Processes positive (A+) and negative (A-) adjacency matrices through separate GCN modules. Two parallel message-passing
-                channels produce embeddings H+ and H-, concatenated for final prediction. Prevents direct cancellation of opposing
-                signals but weights all neighbors equally within each channel.
+                channels produce embeddings H+ and H-, concatenated for final prediction. Prevents direct cancellation of opposing signals
+                but weights all neighbors equally within each channel.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                H+ = GCN(A+, X), H- = GCN(A-, X) → h_v = [h+_v || h-_v]
-              </div>
+              <div className="font-mono text-xs text-neutral-600">H+ = GCN(A+, X), H- = GCN(A-, X) → h_v = [h+_v || h-_v]</div>
             </div>
 
             {/* Model 3 */}
@@ -186,9 +182,7 @@ export default function SignedNetworkPredictionPage() {
                 α+_vu and α-_vu over neighbors u in N+_v and N-_v respectively. Learns to emphasize stable, informative neighbors and
                 downweight noisy relationships. Final embedding aggregates weighted messages from both polarity channels.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                Sign-specific attention kernels → learned neighbor importance
-              </div>
+              <div className="font-mono text-xs text-neutral-600">Sign-specific attention kernels → learned neighbor importance</div>
             </div>
           </div>
         </div>
@@ -294,8 +288,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-xl font-bold">Computational Cost</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                LR trains in under 2 seconds but requires manual feature engineering. Signed GAT trains 75× faster than Decoupled GNN
-                while achieving better performance, making it practical for large signed networks.
+                LR trains in under 2 seconds but requires manual feature engineering. Signed GAT trains 75× faster than Decoupled GNN while
+                achieving better performance, making it practical for large signed networks.
               </p>
               <div className="font-mono text-xs text-neutral-600">36s (Epinions) vs 110s (Decoupled GNN)</div>
             </div>
@@ -311,8 +305,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Python 3.8+</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Core language for data processing, graph construction, model training, and evaluation. NumPy for efficient array
-                operations on large adjacency matrices.
+                Core language for data processing, graph construction, model training, and evaluation. NumPy for efficient array operations
+                on large adjacency matrices.
               </p>
               <div className="font-mono text-xs text-neutral-600">Graph Processing · Numerical Computing</div>
             </div>
@@ -329,8 +323,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Scikit-learn</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Logistic Regression baseline, train-test splitting, and comprehensive evaluation metrics (accuracy, precision, recall,
-                F1, AUC, ROC curves). Provided feature scaling and cross-validation utilities.
+                Logistic Regression baseline, train-test splitting, and comprehensive evaluation metrics (accuracy, precision, recall, F1,
+                AUC, ROC curves). Provided feature scaling and cross-validation utilities.
               </p>
               <div className="font-mono text-xs text-neutral-600">ML Baseline · Evaluation Metrics</div>
             </div>
@@ -373,9 +367,9 @@ export default function SignedNetworkPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Sign-Aware Attention Learns Signal Quality</h3>
               <p className="leading-relaxed text-neutral-400">
-                Signed GAT's separate attention kernels for positive and negative neighbors allow the model to emphasize stable,
-                informative relationships and downweight noisy ones. This adaptive weighting outperformed equal-weight Decoupled GNN
-                and achieved 0.904 F1 on Epinions, 0.887 on Slashdot.
+                Signed GAT's separate attention kernels for positive and negative neighbors allow the model to emphasize stable, informative
+                relationships and downweight noisy ones. This adaptive weighting outperformed equal-weight Decoupled GNN and achieved 0.904
+                F1 on Epinions, 0.887 on Slashdot.
               </p>
             </div>
 
@@ -390,8 +384,8 @@ export default function SignedNetworkPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">F1 Over Accuracy for Imbalanced Classes</h3>
               <p className="leading-relaxed text-neutral-400">
-                With 14-23% negative edges, predicting "all positive" achieves high accuracy while completely failing on minority class.
-                F1 and AUC metrics revealed that Signed GAT improved minority class prediction, especially on noisy Slashdot labels.
+                With 14-23% negative edges, predicting "all positive" achieves high accuracy while completely failing on minority class. F1
+                and AUC metrics revealed that Signed GAT improved minority class prediction, especially on noisy Slashdot labels.
               </p>
             </div>
 
@@ -399,8 +393,8 @@ export default function SignedNetworkPredictionPage() {
               <h3 className="mb-3 text-xl font-bold">Polarity Separation Prevents Signal Cancellation</h3>
               <p className="leading-relaxed text-neutral-400">
                 Decoupling positive and negative message-passing channels (A+ and A-) prevented supportive and adversarial signals from
-                directly canceling. Both Decoupled GNN and Signed GAT benefited from this architectural choice compared to naive GCNs
-                that blend all neighbors uniformly.
+                directly canceling. Both Decoupled GNN and Signed GAT benefited from this architectural choice compared to naive GCNs that
+                blend all neighbors uniformly.
               </p>
             </div>
           </div>

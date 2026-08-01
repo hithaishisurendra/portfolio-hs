@@ -33,9 +33,9 @@ export default function AboutPage() {
               MS Computer Science at Arizona State University, specializing in machine learning and distributed systems.
             </p>
             <p className="mb-3">
-              I build full-stack products and the systems behind them. Recently that's meant real-time sports platforms, a FastAPI and Next.js
-              migration, an AI advising chatbot, and multi-agent LLM pipelines. Before grad school I built storage and backup infrastructure
-              at Telstra's Cloud Group.
+              I build full-stack products and the systems behind them. Recently that's meant real-time sports platforms, a FastAPI and
+              Next.js migration, an AI advising chatbot, and multi-agent LLM pipelines. Before grad school I built storage and backup
+              infrastructure at Telstra's Cloud Group.
             </p>
             <p className="mb-3">
               Outside coursework I build things I find interesting, like Evolution of Formula One (an interactive scrollytelling site) and a

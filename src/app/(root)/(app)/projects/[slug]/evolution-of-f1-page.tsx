@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function EvolutionOfF1Page() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -39,11 +37,13 @@ export default function EvolutionOfF1Page() {
             </div>
           </div>
           <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Evolution of Formula One</h1>
-          <p className="mb-4 text-2xl text-neutral-400">Interactive scrollytelling experience exploring F1 safety trends and pit strategies</p>
+          <p className="mb-4 text-2xl text-neutral-400">
+            Interactive scrollytelling experience exploring F1 safety trends and pit strategies
+          </p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
-            An interactive data visualization that explores how Formula One has evolved through safety improvements and strategic innovations.
-            Built with D3.js and custom animations, the project uses race track-style layouts and scrollytelling to guide users through decades
-            of F1 history.
+            An interactive data visualization that explores how Formula One has evolved through safety improvements and strategic
+            innovations. Built with D3.js and custom animations, the project uses race track-style layouts and scrollytelling to guide users
+            through decades of F1 history.
           </p>
 
           {/* Key Metrics */}
@@ -75,8 +75,8 @@ export default function EvolutionOfF1Page() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              Formula One has transformed dramatically over its 70+ year history, but understanding these changes requires navigating through
-              dense statistics and historical records. Traditional static visualizations fail to capture the narrative arc of safety
+              Formula One has transformed dramatically over its 70+ year history, but understanding these changes requires navigating
+              through dense statistics and historical records. Traditional static visualizations fail to capture the narrative arc of safety
               improvements and strategic evolution.
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
@@ -90,15 +90,16 @@ export default function EvolutionOfF1Page() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Complex Historical Data</h3>
               <p className="text-neutral-400">
-                Decades of race results, safety statistics, and performance metrics scattered across multiple sources requiring aggregation and
-                normalization.
+                Decades of race results, safety statistics, and performance metrics scattered across multiple sources requiring aggregation
+                and normalization.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Engagement Challenge</h3>
               <p className="text-neutral-400">
-                Static charts and tables fail to convey the dramatic evolution of F1—needed immersive storytelling to maintain user interest.
+                Static charts and tables fail to convey the dramatic evolution of F1—needed immersive storytelling to maintain user
+                interest.
               </p>
             </div>
 
@@ -132,8 +133,8 @@ export default function EvolutionOfF1Page() {
             <div className="border-l-4 border-white bg-black p-6">
               <h3 className="mb-3 text-2xl font-bold">Car Anatomy Interactive Tool</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Detailed F1 car diagram with clickable components revealing how safety features evolved over time. Users can explore changes in
-                cockpit design, halo protection, crash structures, and more through interactive overlays.
+                Detailed F1 car diagram with clickable components revealing how safety features evolved over time. Users can explore changes
+                in cockpit design, halo protection, crash structures, and more through interactive overlays.
               </p>
               <div className="font-mono text-xs text-neutral-600">Interactive SVG · Tooltip System · Historical Annotations</div>
             </div>
@@ -172,8 +173,8 @@ export default function EvolutionOfF1Page() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Constructor Bump Chart</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Animated ranking visualization showing constructor championship standings from 1958 to present. Lines flow and cross as teams
-                rise and fall, revealing dominance periods and competitive eras.
+                Animated ranking visualization showing constructor championship standings from 1958 to present. Lines flow and cross as
+                teams rise and fall, revealing dominance periods and competitive eras.
               </p>
               <div className="font-mono text-xs text-neutral-600">D3 Line Charts · Rank Transitions · Time Series Animation</div>
             </div>
@@ -192,8 +193,8 @@ export default function EvolutionOfF1Page() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Driver Bubble Chart</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Interactive scatter plot mapping driver championships vs. race wins. Bubble size represents career longevity, colors represent
-                eras, revealing patterns of consistency vs. dominance.
+                Interactive scatter plot mapping driver championships vs. race wins. Bubble size represents career longevity, colors
+                represent eras, revealing patterns of consistency vs. dominance.
               </p>
               <div className="font-mono text-xs text-neutral-600">D3 Force Layout · Interactive Tooltips · Multi-Dimensional Encoding</div>
             </div>
@@ -324,9 +325,7 @@ export default function EvolutionOfF1Page() {
             <div className="space-y-3 text-neutral-400">
               <div className="flex items-start gap-3">
                 <span className="text-neutral-600">•</span>
-                <span>
-                  Race results, constructor standings, and driver statistics from Ergast F1 API covering all championship seasons
-                </span>
+                <span>Race results, constructor standings, and driver statistics from Ergast F1 API covering all championship seasons</span>
               </div>
               <div className="flex items-start gap-3">
                 <span className="text-neutral-600">•</span>

@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function TennisPredictionPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -26,7 +24,9 @@ export default function TennisPredictionPage() {
             </a>
           </div>
           <h1 className="mb-6 text-5xl font-bold leading-tight md:text-6xl">Tennis Match Outcome Prediction</h1>
-          <p className="mb-4 text-2xl text-neutral-400">Binary classification of ATP match outcomes using differential feature engineering</p>
+          <p className="mb-4 text-2xl text-neutral-400">
+            Binary classification of ATP match outcomes using differential feature engineering
+          </p>
           <p className="max-w-3xl text-lg leading-relaxed text-neutral-500">
             End-to-end ML pipeline built on 5 years of ATP match data covering 11,000+ instances. By transforming absolute winner/loser
             statistics into relative player-vs-opponent differentials, the dataset became linearly separable, enabling Logistic Regression
@@ -62,9 +62,9 @@ export default function TennisPredictionPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              Tennis match outcome prediction is inherently challenging because raw winner and loser statistics exhibit high correlation
-              but provide limited predictive signal. Traditional approaches that treat winner_ace and loser_ace as independent features
-              fail to capture the relative performance gap that actually determines match outcomes.
+              Tennis match outcome prediction is inherently challenging because raw winner and loser statistics exhibit high correlation but
+              provide limited predictive signal. Traditional approaches that treat winner_ace and loser_ace as independent features fail to
+              capture the relative performance gap that actually determines match outcomes.
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
               The dataset consists of ATP matches from 2020-2024 with 11,515 instances and 49 features including player rankings, ages,
@@ -76,24 +76,24 @@ export default function TennisPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">High Feature Correlation</h3>
               <p className="text-neutral-400">
-                Winner and loser stats showed 0.7+ correlation across serve metrics, ages, and heights—indicating that absolute values
-                alone don't distinguish outcomes effectively.
+                Winner and loser stats showed 0.7+ correlation across serve metrics, ages, and heights—indicating that absolute values alone
+                don't distinguish outcomes effectively.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Missing Contextual Signal</h3>
               <p className="text-neutral-400">
-                A 30-year-old facing a 19-year-old opponent is fundamentally different from a 30-year-old facing a 32-year-old, yet raw
-                age features don't encode this comparative dynamic.
+                A 30-year-old facing a 19-year-old opponent is fundamentally different from a 30-year-old facing a 32-year-old, yet raw age
+                features don't encode this comparative dynamic.
               </p>
             </div>
 
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Class Balance</h3>
               <p className="text-neutral-400">
-                Original format had one winner and one loser per match. Transformation doubled the dataset by creating player/opponent pairs,
-                maintaining 50-50 class balance naturally.
+                Original format had one winner and one loser per match. Transformation doubled the dataset by creating player/opponent
+                pairs, maintaining 50-50 class balance naturally.
               </p>
             </div>
           </div>
@@ -165,9 +165,9 @@ export default function TennisPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-2xl font-bold">1. Differential Features</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Computed player_stat - opponent_stat for all key metrics: rank_diff, ace_diff, df_diff, 1stWon_diff, 2ndWon_diff, bpSaved_diff,
-                age_diff. These relative comparisons encode performance gaps directly—positive values favor the player, negative favor
-                the opponent.
+                Computed player_stat - opponent_stat for all key metrics: rank_diff, ace_diff, df_diff, 1stWon_diff, 2ndWon_diff,
+                bpSaved_diff, age_diff. These relative comparisons encode performance gaps directly—positive values favor the player,
+                negative favor the opponent.
               </p>
               <div className="font-mono text-xs text-neutral-600">
                 Example: rank_diff = 10 - 2 = 8 indicates player is ranked 8 positions lower (worse) than opponent
@@ -267,10 +267,12 @@ export default function TennisPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-xl font-bold">Why Logistic Regression Won</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Differential feature engineering created a linearly separable decision boundary. Logistic Regression directly models
-                P(win | features) through a linear combination of differential stats, perfectly suited for this transformed feature space.
+                Differential feature engineering created a linearly separable decision boundary. Logistic Regression directly models P(win |
+                features) through a linear combination of differential stats, perfectly suited for this transformed feature space.
               </p>
-              <div className="font-mono text-xs text-neutral-600">Linear separability + proper feature engineering = optimal performance</div>
+              <div className="font-mono text-xs text-neutral-600">
+                Linear separability + proper feature engineering = optimal performance
+              </div>
             </div>
 
             <div className="border border-neutral-800 bg-black p-6">
@@ -293,8 +295,8 @@ export default function TennisPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Python 3.8+</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Core language for data processing, EDA, and model training. NumPy and Pandas enabled efficient vectorized operations on
-                23K instances with 45+ features.
+                Core language for data processing, EDA, and model training. NumPy and Pandas enabled efficient vectorized operations on 23K
+                instances with 45+ features.
               </p>
               <div className="font-mono text-xs text-neutral-600">Data Processing · Numerical Computing</div>
             </div>
@@ -311,8 +313,8 @@ export default function TennisPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Scikit-learn</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Logistic Regression, Random Forest, SVM implementations. Also provided StandardScaler, train_test_split, GridSearchCV,
-                and comprehensive evaluation metrics (accuracy, precision, recall, F1, AUC, ROC curves).
+                Logistic Regression, Random Forest, SVM implementations. Also provided StandardScaler, train_test_split, GridSearchCV, and
+                comprehensive evaluation metrics (accuracy, precision, recall, F1, AUC, ROC curves).
               </p>
               <div className="font-mono text-xs text-neutral-600">ML Models · Evaluation · Preprocessing</div>
             </div>
@@ -329,8 +331,8 @@ export default function TennisPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Seaborn & Matplotlib</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Visualization libraries for EDA: distribution plots, correlation heatmaps, boxplots, violin plots, ROC curves, and
-                feature importance analysis. Essential for understanding data structure and model behavior.
+                Visualization libraries for EDA: distribution plots, correlation heatmaps, boxplots, violin plots, ROC curves, and feature
+                importance analysis. Essential for understanding data structure and model behavior.
               </p>
               <div className="font-mono text-xs text-neutral-600">Data Visualization · EDA</div>
             </div>
@@ -373,8 +375,8 @@ export default function TennisPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Simpler Models Can Win</h3>
               <p className="leading-relaxed text-neutral-400">
-                When the feature space is properly engineered, simple linear models outperform complex ensembles. Logistic Regression
-                beat Random Forest (+2.3%), XGBoost (+1.8%), and SVM (+3.5%) while offering better interpretability and 75x faster training.
+                When the feature space is properly engineered, simple linear models outperform complex ensembles. Logistic Regression beat
+                Random Forest (+2.3%), XGBoost (+1.8%), and SVM (+3.5%) while offering better interpretability and 75x faster training.
               </p>
             </div>
 
@@ -382,8 +384,8 @@ export default function TennisPredictionPage() {
               <h3 className="mb-3 text-xl font-bold">Context Matters More Than Absolutes</h3>
               <p className="leading-relaxed text-neutral-400">
                 Raw statistics like age, rank, and aces showed high correlation but weak predictive power. Differential features encoding
-                comparative advantages (player vs opponent) captured the true dynamics of match outcomes. A 30-year-old vs 19-year-old
-                is fundamentally different from 30 vs 32, but only differential features encode this.
+                comparative advantages (player vs opponent) captured the true dynamics of match outcomes. A 30-year-old vs 19-year-old is
+                fundamentally different from 30 vs 32, but only differential features encode this.
               </p>
             </div>
           </div>

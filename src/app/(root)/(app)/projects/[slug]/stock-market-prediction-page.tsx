@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function StockMarketPredictionPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -61,8 +59,8 @@ export default function StockMarketPredictionPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              High-frequency trading requires predicting short-term price movements with high accuracy. The Optiver NASDAQ dataset presents a
-              challenging binary classification task: given current market conditions, will the stock price move up or down in the next 60
+              High-frequency trading requires predicting short-term price movements with high accuracy. The Optiver NASDAQ dataset presents
+              a challenging binary classification task: given current market conditions, will the stock price move up or down in the next 60
               seconds?
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
@@ -92,8 +90,8 @@ export default function StockMarketPredictionPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Market Noise</h3>
               <p className="text-neutral-400">
-                60-second movements contain significant randomness. Models must distinguish signal from noise to avoid overfitting on spurious
-                patterns.
+                60-second movements contain significant randomness. Models must distinguish signal from noise to avoid overfitting on
+                spurious patterns.
               </p>
             </div>
           </div>
@@ -206,8 +204,8 @@ export default function StockMarketPredictionPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-2xl font-bold">2. Rolling Statistics</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
-                Computed rolling mean, standard deviation, min, and max over 5, 10, and 20-period windows. Rolling volatility captures regime
-                changes while rolling means identify trend direction. Z-score normalization ensures scale invariance across stocks.
+                Computed rolling mean, standard deviation, min, and max over 5, 10, and 20-period windows. Rolling volatility captures
+                regime changes while rolling means identify trend direction. Z-score normalization ensures scale invariance across stocks.
               </p>
               <div className="font-mono text-xs text-neutral-600">
                 rolling_mean_5, rolling_std_10, rolling_zscore → Trend and volatility indicators
@@ -233,9 +231,7 @@ export default function StockMarketPredictionPage() {
                 Computed imbalance between bid and ask volumes at each level of order book. High bid volume relative to ask volume suggests
                 upward pressure. Aggregated across multiple depth levels to capture full order book state.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                volume_imbalance, weighted_imbalance → Supply-demand dynamics
-              </div>
+              <div className="font-mono text-xs text-neutral-600">volume_imbalance, weighted_imbalance → Supply-demand dynamics</div>
             </div>
 
             {/* Feature 5 */}
@@ -245,9 +241,7 @@ export default function StockMarketPredictionPage() {
                 Calculated percentage price change over multiple horizons (1-period, 3-period, 5-period). Acceleration features (second
                 derivative of price) capture momentum shifts. These features help distinguish trending from mean-reverting regimes.
               </p>
-              <div className="font-mono text-xs text-neutral-600">
-                price_change_pct, price_acceleration → Momentum and regime detection
-              </div>
+              <div className="font-mono text-xs text-neutral-600">price_change_pct, price_acceleration → Momentum and regime detection</div>
             </div>
           </div>
         </div>
@@ -318,8 +312,8 @@ export default function StockMarketPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-xl font-bold">Training Configuration</h3>
               <p className="mb-4 text-sm leading-relaxed text-neutral-400">
-                Adam optimizer with learning rate 0.001, binary cross-entropy loss. Trained for 50 epochs with early stopping (patience=5) on
-                validation F1 score. Batch size 512 to leverage GPU parallelism.
+                Adam optimizer with learning rate 0.001, binary cross-entropy loss. Trained for 50 epochs with early stopping (patience=5)
+                on validation F1 score. Batch size 512 to leverage GPU parallelism.
               </p>
               <div className="mb-3 font-mono text-xs text-neutral-600">Training Details</div>
               <ul className="space-y-1 text-xs text-neutral-400">
@@ -431,8 +425,8 @@ export default function StockMarketPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">XGBoost</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Gradient boosting library for baseline model. Efficient handling of structured data with built-in regularization and parallel
-                tree construction.
+                Gradient boosting library for baseline model. Efficient handling of structured data with built-in regularization and
+                parallel tree construction.
               </p>
               <div className="font-mono text-xs text-neutral-600">Gradient Boosting · Tree Ensembles</div>
             </div>
@@ -449,8 +443,8 @@ export default function StockMarketPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Pandas</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                DataFrame operations for time series manipulation, rolling window calculations, lagged feature generation, and train-val-test
-                splitting by time.
+                DataFrame operations for time series manipulation, rolling window calculations, lagged feature generation, and
+                train-val-test splitting by time.
               </p>
               <div className="font-mono text-xs text-neutral-600">Time Series · Feature Engineering</div>
             </div>
@@ -458,8 +452,8 @@ export default function StockMarketPredictionPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">NumPy</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Array operations for sequence reshaping, normalization, and vectorized calculations. Critical for efficient processing of 5.2M
-                samples.
+                Array operations for sequence reshaping, normalization, and vectorized calculations. Critical for efficient processing of
+                5.2M samples.
               </p>
               <div className="font-mono text-xs text-neutral-600">Numerical Arrays · Vectorization</div>
             </div>
@@ -493,16 +487,17 @@ export default function StockMarketPredictionPage() {
               <h3 className="mb-3 text-xl font-bold">Deep Learning Beats Traditional ML</h3>
               <p className="leading-relaxed text-neutral-400">
                 LSTM-based models achieved 5-8% higher accuracy than XGBoost, validating the importance of modeling temporal dependencies
-                explicitly. Sequential architecture naturally captures autocorrelation and regime changes that gradient boosting struggles to
-                represent.
+                explicitly. Sequential architecture naturally captures autocorrelation and regime changes that gradient boosting struggles
+                to represent.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Balanced Metrics for Trading</h3>
               <p className="leading-relaxed text-neutral-400">
-                0.833 F1 score reflects balanced precision-recall tradeoff essential for trading applications. High recall (0.85) ensures most
-                profitable moves are captured, while reasonable precision (0.82) limits false signals that would incur transaction costs.
+                0.833 F1 score reflects balanced precision-recall tradeoff essential for trading applications. High recall (0.85) ensures
+                most profitable moves are captured, while reasonable precision (0.82) limits false signals that would incur transaction
+                costs.
               </p>
             </div>
           </div>

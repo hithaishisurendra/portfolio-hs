@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export default function ArizonaMVDRedesignPage() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -63,14 +61,14 @@ export default function ArizonaMVDRedesignPage() {
 
           <div className="mb-12 space-y-4">
             <p className="text-lg leading-relaxed text-neutral-400">
-              The Arizona MVD website serves thousands of residents daily for critical motor vehicle tasks. Initial analysis revealed
-              severe usability issues: multiple conflicting homepages (MVD Home, AZDOT, AZMVDNow), inconsistent menu labels hiding
-              important actions, and critical document requirements buried inside PDFs or dense paragraphs.
+              The Arizona MVD website serves thousands of residents daily for critical motor vehicle tasks. Initial analysis revealed severe
+              usability issues: multiple conflicting homepages (MVD Home, AZDOT, AZMVDNow), inconsistent menu labels hiding important
+              actions, and critical document requirements buried inside PDFs or dense paragraphs.
             </p>
             <p className="text-lg leading-relaxed text-neutral-400">
               Participants testing the original site reported high cognitive load, low confidence, and frequent phrases like "I'm
-              assuming..." and "I'm not sure." Average task completion times ranged from 123 to 269 seconds, with only 17% achieving
-              full success (task complete + documents clear).
+              assuming..." and "I'm not sure." Average task completion times ranged from 123 to 269 seconds, with only 17% achieving full
+              success (task complete + documents clear).
             </p>
           </div>
 
@@ -78,8 +76,8 @@ export default function ArizonaMVDRedesignPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Multiple Homepages</h3>
               <p className="text-neutral-400">
-                Clicking the logo redirected to a different homepage than MVD Home. Users became disoriented navigating between ADOT,
-                MVD, and AZMVDNow pages.
+                Clicking the logo redirected to a different homepage than MVD Home. Users became disoriented navigating between ADOT, MVD,
+                and AZMVDNow pages.
               </p>
             </div>
 
@@ -102,8 +100,8 @@ export default function ArizonaMVDRedesignPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Cross-Site Redirects</h3>
               <p className="text-neutral-400">
-                Broken flow between ADOT and AZMVDNow sites. First-time users couldn't understand why they were redirected or whether
-                they were still on the official MVD website.
+                Broken flow between ADOT and AZMVDNow sites. First-time users couldn't understand why they were redirected or whether they
+                were still on the official MVD website.
               </p>
             </div>
           </div>
@@ -159,8 +157,8 @@ export default function ArizonaMVDRedesignPage() {
             <div className="border border-neutral-800 bg-black p-6">
               <h3 className="mb-3 text-lg font-bold">Metric 2: Task Success</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                3-level coding: 0 (fail + documents unclear), 1 (success + documents unclear), 2 (success + documents clear). Captured
-                both navigation performance and critical document clarity.
+                3-level coding: 0 (fail + documents unclear), 1 (success + documents unclear), 2 (success + documents clear). Captured both
+                navigation performance and critical document clarity.
               </p>
               <div className="font-mono text-xs text-neutral-600">Navigation + information clarity</div>
             </div>
@@ -331,9 +329,7 @@ export default function ArizonaMVDRedesignPage() {
                 </tbody>
               </table>
             </div>
-            <p className="mt-4 text-sm text-neutral-500">
-              Overall satisfaction: t(10)=6.22, p{'{<}'}.001 — highly significant improvement
-            </p>
+            <p className="mt-4 text-sm text-neutral-500">Overall satisfaction: t(10)=6.22, p{'{<}'}.001 — highly significant improvement</p>
           </div>
         </div>
       </section>
@@ -349,8 +345,8 @@ export default function ArizonaMVDRedesignPage() {
               <h3 className="mb-3 text-2xl font-bold">1. Unified Task-Oriented Homepage</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
                 Replaced multiple conflicting homepages (MVD Home, AZDOT, AZMVDNow) with single dashboard featuring clear "Complete These
-                Common Tasks" cards. Each card shows "How it Works" section and required documents checklist—addressing confusion and
-                hidden information from original site.
+                Common Tasks" cards. Each card shows "How it Works" section and required documents checklist—addressing confusion and hidden
+                information from original site.
               </p>
               <div className="font-mono text-xs text-neutral-600">Cognitive Load Theory: Reduced working memory demands</div>
             </div>
@@ -363,7 +359,9 @@ export default function ArizonaMVDRedesignPage() {
                 Vehicle, Business, Other). Reduces search space and supports recognition over recall—users visually browse labeled tasks
                 instead of remembering exact terminology.
               </p>
-              <div className="font-mono text-xs text-neutral-600">Nielsen Heuristics: Recognition over recall, visibility of system status</div>
+              <div className="font-mono text-xs text-neutral-600">
+                Nielsen Heuristics: Recognition over recall, visibility of system status
+              </div>
             </div>
 
             {/* Solution 3 */}
@@ -371,8 +369,8 @@ export default function ArizonaMVDRedesignPage() {
               <h3 className="mb-3 text-2xl font-bold">3. Prominent Document Checklists</h3>
               <p className="mb-3 leading-relaxed text-neutral-400">
                 Added required documents list at top of every task page, visible before any form fields or login prompts. Eliminated
-                guessing and PDF-hunting—document clarity success rose from 0% to 100%, and "easy to find documents" rating increased
-                from 1.5 to 6.3.
+                guessing and PDF-hunting—document clarity success rose from 0% to 100%, and "easy to find documents" rating increased from
+                1.5 to 6.3.
               </p>
               <div className="font-mono text-xs text-neutral-600">Information architecture: Front-load critical information</div>
             </div>
@@ -427,8 +425,8 @@ export default function ArizonaMVDRedesignPage() {
             <div className="border border-neutral-800 bg-neutral-950 p-6">
               <h3 className="mb-3 text-lg font-bold">Video Call + Screen Recording</h3>
               <p className="mb-3 text-sm leading-relaxed text-neutral-400">
-                Remote moderated sessions via Zoom with screen sharing. Recorded navigation paths, timestamps, and verbal feedback for
-                later analysis. Enabled recruitment of geographically distributed Arizona residents.
+                Remote moderated sessions via Zoom with screen sharing. Recorded navigation paths, timestamps, and verbal feedback for later
+                analysis. Enabled recruitment of geographically distributed Arizona residents.
               </p>
               <div className="font-mono text-xs text-neutral-600">Remote Testing · Session Recording</div>
             </div>
@@ -471,16 +469,16 @@ export default function ArizonaMVDRedesignPage() {
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Document Visibility Solved Primary Failure Mode</h3>
               <p className="leading-relaxed text-neutral-400">
-                Original website's biggest problem was buried requirements—0% document clarity success across all tasks. Redesign's
-                upfront checklists achieved 100% success and +4.8 rating increase (1.5 → 6.3), eliminating guessing and PDF-hunting.
+                Original website's biggest problem was buried requirements—0% document clarity success across all tasks. Redesign's upfront
+                checklists achieved 100% success and +4.8 rating increase (1.5 → 6.3), eliminating guessing and PDF-hunting.
               </p>
             </div>
 
             <div className="border-l-4 border-white bg-neutral-950 p-6">
               <h3 className="mb-3 text-xl font-bold">Multiple Homepages Created Cognitive Overload</h3>
               <p className="leading-relaxed text-neutral-400">
-                Unified dashboard replacing MVD Home, AZDOT, and AZMVDNow reduced navigation confusion. Task 1 time dropped 72%
-                (268s → 77s), and participants reported the flow "felt straightforward" vs original's disorienting cross-site redirects.
+                Unified dashboard replacing MVD Home, AZDOT, and AZMVDNow reduced navigation confusion. Task 1 time dropped 72% (268s →
+                77s), and participants reported the flow "felt straightforward" vs original's disorienting cross-site redirects.
               </p>
             </div>
 
