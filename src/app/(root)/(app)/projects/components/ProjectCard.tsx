@@ -52,7 +52,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         ))}
       </div>
 
-      <div className="flex items-center gap-4">
+      <div className="flex items-center flex-wrap gap-4">
         {project.slug && (
           <span className="inline-flex items-center text-sm font-medium hover:underline">
             View Details
@@ -70,6 +70,63 @@ export default function ProjectCard({ project }: { project: Project }) {
             onClick={(e) => e.stopPropagation()}
           >
             GitHub
+            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        )}
+        {project.websiteLink && (
+          <a
+            className="inline-flex items-center text-sm font-medium hover:underline"
+            href={project.websiteLink}
+            rel="noopener noreferrer"
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {project.slug === 'arizona-mvd-redesign' ? 'View Figma Prototype' : 'View Website'}
+            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        )}
+        {project.publicationLink && (
+          <a
+            className="inline-flex items-center text-sm font-medium hover:underline"
+            href={project.publicationLink}
+            rel="noopener noreferrer"
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Publication
+            <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+              />
+            </svg>
+          </a>
+        )}
+        {project.colabLink && (
+          <a
+            className="inline-flex items-center text-sm font-medium hover:underline"
+            href={project.colabLink}
+            rel="noopener noreferrer"
+            target="_blank"
+            onClick={(e) => e.stopPropagation()}
+          >
+            View Colab
             <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"

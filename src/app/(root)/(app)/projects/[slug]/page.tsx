@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import AdasPage from './adas-page'
+import ArizonaMVDRedesignPage from './arizona-mvd-redesign-page'
 import CS2AnalyticsPage from './cs2-analytics-page'
+import EvolutionOfF1Page from './evolution-of-f1-page'
 import EvaPage from './eva-page'
 import ResilientMessagingPage from './resilient-messaging-page'
+import SignedNetworkPredictionPage from './signed-network-prediction-page'
+import StockMarketPredictionPage from './stock-market-prediction-page'
 import SWEBenchPage from './swe-bench-page'
+import TennisPredictionPage from './tennis-prediction-page'
 
 interface ProjectPageProps {
   params: {
@@ -18,9 +23,14 @@ export async function generateStaticParams() {
     { slug: 'summarization' },
     { slug: 'swe-bench' },
     { slug: 'cs2-analytics' },
+    { slug: 'evolution-of-f1' },
+    { slug: 'stock-market-prediction' },
     { slug: 'adas' },
     { slug: 'eva' },
     { slug: 'resilient-messaging' },
+    { slug: 'tennis-prediction' },
+    { slug: 'signed-network-prediction' },
+    { slug: 'arizona-mvd-redesign' },
   ]
 }
 
@@ -41,6 +51,16 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       description:
         'Kafka-based ingestion pipeline with replicated CockroachDB cluster for fault-tolerant, scalable CS2 telemetry processing. 3-node cluster, 68/68 ranges replicated, 0 parser failures.',
     },
+    'evolution-of-f1': {
+      title: 'Evolution of Formula One - Projects',
+      description:
+        'Interactive scrollytelling data visualization exploring F1 safety trends and pit strategies. Built with D3.js, featuring 8+ custom visualizations and race track animations.',
+    },
+    'stock-market-prediction': {
+      title: 'Stock Market Movement Prediction - Projects',
+      description:
+        'Binary classification of 60-second price movements using LSTM architectures. Achieved 84% accuracy and 0.833 F1 score on Optiver NASDAQ dataset with 5.2M samples across 200 stocks.',
+    },
     adas: {
       title: 'Lane & Traffic Sign Detection for ADAS - Projects',
       description:
@@ -55,6 +75,21 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
       title: 'Resilient Messaging System - Projects',
       description:
         'Kafka-backed messaging platform with disaster recovery. MERN stack, 100% message persistence across crashes, asynchronous decoupling.',
+    },
+    'tennis-prediction': {
+      title: 'Tennis Match Outcome Prediction - Projects',
+      description:
+        'Binary classification of ATP match outcomes using differential feature engineering. Achieved 95.3% accuracy and 0.99 AUC with Logistic Regression on 5 years of match data (11K+ instances).',
+    },
+    'signed-network-prediction': {
+      title: 'Signed Network Link Prediction - Projects',
+      description:
+        'Signed link prediction on Epinions and Slashdot using Graph Attention Networks. Achieved 0.904 F1 and 0.984 AUC on Epinions with sign-aware attention mechanisms.',
+    },
+    'arizona-mvd-redesign': {
+      title: 'Arizona MVD Usability Redesign - Projects',
+      description:
+        'A/B usability study (n=12) with Figma prototype. Reduced task completion time by 72%, achieved 100% task success, and increased satisfaction from 2.8 to 6.0 through unified dashboard and document checklists.',
     },
   }
 
@@ -84,6 +119,26 @@ export default function ProjectDetailPage({ params }: ProjectPageProps) {
 
   if (params.slug === 'cs2-analytics') {
     return <CS2AnalyticsPage />
+  }
+
+  if (params.slug === 'evolution-of-f1') {
+    return <EvolutionOfF1Page />
+  }
+
+  if (params.slug === 'stock-market-prediction') {
+    return <StockMarketPredictionPage />
+  }
+
+  if (params.slug === 'tennis-prediction') {
+    return <TennisPredictionPage />
+  }
+
+  if (params.slug === 'signed-network-prediction') {
+    return <SignedNetworkPredictionPage />
+  }
+
+  if (params.slug === 'arizona-mvd-redesign') {
+    return <ArizonaMVDRedesignPage />
   }
 
   if (params.slug === 'adas') {

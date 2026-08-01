@@ -27,6 +27,7 @@ export interface IMetadata {
   title: string
   publishedAt: string
   summary: string
+  projectLink?: string
 }
 
 export interface IPost {

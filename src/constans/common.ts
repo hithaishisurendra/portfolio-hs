@@ -27,7 +27,7 @@ export const SOCIALS = {
   EMAIL: 'mailto:hsurendr@asu.edu',
 }
 
-export const RESUME_URL = 'https://drive.google.com/file/d/1WybyrpPrNGs60ckVYO-nJrhFtuO5USBQ/view?usp=sharing'
+export const RESUME_URL = 'https://drive.google.com/drive/folders/1_o-nPnr0WXYedBuDt7pMmlZ4Erlwam17?usp=sharing'
 
 export const FORMSPREE_KEY = 'mredeykn'
 

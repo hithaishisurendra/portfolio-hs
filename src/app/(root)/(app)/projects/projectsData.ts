@@ -6,6 +6,9 @@ export interface Project {
   date: string
   highlights: string[]
   link?: string
+  websiteLink?: string
+  publicationLink?: string
+  colabLink?: string
   category: string
   slug?: string // Optional: If present, links to internal detail page at /projects/[slug]
 }
@@ -67,7 +70,9 @@ export const projects: Project[] = [
     technologies: ['JavaScript', 'D3.js', 'SVG', 'Data Visualization', 'Scrollytelling'],
     date: 'Mar 2025 – May 2025',
     category: 'Data Visualization',
-    link: 'https://hithaishisurendra.github.io/evolution-of-f1/',
+    slug: 'evolution-of-f1',
+    link: 'https://github.com/hithaishisurendra/hithaishisurendra.github.io',
+    websiteLink: 'https://hithaishisurendra.github.io/',
     highlights: [
       'Interactive scrollytelling experience',
       'Custom animations and transitions',
@@ -82,6 +87,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'Bi-LSTM', 'XGBoost', 'Pandas', 'NumPy', 'Scikit-learn'],
     date: 'Sep 2024 – Dec 2024',
     category: 'Machine Learning',
+    slug: 'stock-market-prediction',
     highlights: [
       'Engineered features: lagged values, rolling stats, bid-ask spread',
       'Achieved 84% accuracy and 0.833 F1 score with Bi-LSTM',
@@ -92,12 +98,13 @@ export const projects: Project[] = [
     id: 6,
     title: 'Lane and Traffic Sign Detection for ADAS',
     description:
-      'Semantic segmentation and object detection for autonomous driving, tested in the CARLA simulator across dynamic urban driving scenarios.',
+      'First-author research on semantic segmentation and object detection for autonomous driving, tested in the CARLA simulator across dynamic urban driving scenarios.',
     technologies: ['Python', 'SegNet', 'YOLO', 'CARLA', 'Computer Vision', 'Deep Learning'],
     date: 'Nov 2023',
     category: 'Computer Vision',
     slug: 'adas',
     link: 'https://github.com/hithaishisurendra/ML-algorithms-for-ADAS',
+    publicationLink: 'https://github.com/hithaishisurendra/ML-algorithms-for-ADAS/blob/main/Publication.pdf',
     highlights: [
       'SegNet for lane detection: 94.80% accuracy, 93.42% F-score',
       'YOLO for traffic sign detection: 95.56% accuracy, 93.16% F-score',
@@ -157,6 +164,7 @@ export const projects: Project[] = [
     category: 'NLP & AI',
     slug: 'eva',
     link: 'https://github.com/hithaishisurendra/deep-learning-based-chatbot',
+    publicationLink: 'https://github.com/hithaishisurendra/deep-learning-based-chatbot/blob/main/Publication-two-Hithaishi-Surendra.pdf',
     highlights: [
       'Sequential NN model achieving 89% response efficiency',
       'Google Maps integration for campus navigation',
@@ -187,6 +195,8 @@ export const projects: Project[] = [
     technologies: ['Python', 'Scikit-learn', 'XGBoost', 'Pandas', 'Seaborn'],
     date: 'Jan 2025 – May 2025',
     category: 'Machine Learning',
+    slug: 'tennis-prediction',
+    colabLink: 'https://colab.research.google.com/drive/1h_XkO8mg3P6OfLnshjhB962S8RAbz9Fi?authuser=1',
     highlights: [
       'Engineered differential features (rank_diff, ace_diff, 1stWon_diff) to create a linearly separable feature space',
       'Logistic Regression achieved 95.3% accuracy and AUC 0.99, outperforming Random Forest, XGBoost and SVM',
@@ -201,6 +211,7 @@ export const projects: Project[] = [
     technologies: ['Python', 'PyTorch Geometric', 'Signed GCN', 'Graph Attention Networks', 'Epinions', 'Slashdot'],
     date: 'Jan 2025 – May 2025',
     category: 'Machine Learning',
+    slug: 'signed-network-prediction',
     highlights: [
       'Designed Signed GAT with sign-specific attention kernels; achieved 0.904 F1 and 0.984 AUC on Epinions, outperforming Decoupled GNN and LR baselines',
       'Built 18-feature LR baseline from Structural Balance Theory (triad counts, PageRank, signed Jaccard) that matched GNN accuracy at 75x lower training cost',
@@ -215,6 +226,8 @@ export const projects: Project[] = [
     technologies: ['Figma', 'Usability Testing', 'A/B Study', 'Cognitive Load Theory', 'Nielsen Heuristics', 'Think-Aloud Protocol'],
     date: 'Jan 2025 – May 2025',
     category: 'UX Research',
+    slug: 'arizona-mvd-redesign',
+    websiteLink: 'https://www.figma.com/proto/675JOdl9FxHbjZhvn1o4eE/CSE463UsabilityTestPrototype?node-id=3-103&p=f&t=rwzD2nbPZ7LkNriV-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A103',
     highlights: [
       'Prototype reduced license renewal completion time from 268s to 77s (t(10)=2.67, p<.05) and eliminated document clarity failures — 0% to 100% success across all tasks',
       'Identified 4 core failure modes on original site: overlapping homepages, buried document requirements in PDFs, ambiguous terminology, and broken cross-site redirects',

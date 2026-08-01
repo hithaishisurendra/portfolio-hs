@@ -30,14 +30,18 @@ export default function AboutPage() {
           <h2 className="mb-2 text-xl font-bold">I'm Hithaishi Surendra</h2>
           <div className="mb-6">
             <p className="mb-3">
-              Fresh CS grad from Arizona State with a focus on ML, Agentic AI, and Distributed Systems. I build things end-to-end - scalable
-              backends, AI-powered features, microservices and I care about systems that actually work in production.
+              MS Computer Science at Arizona State University, specializing in machine learning and distributed systems.
             </p>
-            <p className="mb-1">
-              I've shipped at startups (Thropic, Vantion) and at scale (Telstra), which means I'm comfortable going from zero to one and
-              from one to many. Think automated scoring and AI quiz generation, monolith-to-microservices, and cloud storage systems at
-              scale. Currently looking for software engineering and MLE roles where I can keep doing both.
+            <p className="mb-3">
+              I build full-stack products and the systems behind them. Recently that's meant real-time sports platforms, a FastAPI and Next.js
+              migration, an AI advising chatbot, and multi-agent LLM pipelines. Before grad school I built storage and backup infrastructure
+              at Telstra's Cloud Group.
             </p>
+            <p className="mb-3">
+              Outside coursework I build things I find interesting, like Evolution of Formula One (an interactive scrollytelling site) and a
+              distributed Counter Strike 2 analytics platform.
+            </p>
+            <p className="mb-1">Actively looking for SWE and MLE roles. Open to connecting.</p>
           </div>
           <a
             download

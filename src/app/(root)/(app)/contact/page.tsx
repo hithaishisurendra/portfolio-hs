@@ -24,10 +24,7 @@ export default function ContactPage() {
         <div className="mb-4 w-full text-center lg:w-[480px] lg:text-left">
           <div className="mb-8">
             <h2 className="mb-3 text-lg font-bold">LOCATION</h2>
-            <p className="text-sm leading-5">
-              Tempe, AZ <br />
-              USA
-            </p>
+            <p className="text-sm leading-5">United States</p>
           </div>
           <div className="mb-8">
             <h2 className="mb-3 text-lg font-bold">EMAIL ADDRESS</h2>
